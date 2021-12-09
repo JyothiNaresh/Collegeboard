@@ -275,13 +275,6 @@
       <DependentUpon>BoardCollegeBranchMapping.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Examination\BoardEnrollments\Transactions\BoardDetailsEntryBenglore.aspx.designer.vb">
-      <DependentUpon>BoardDetailsEntryBenglore.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Examination\BoardEnrollments\Transactions\BoardDetailsEntryBenglore.aspx.vb">
-      <DependentUpon>BoardDetailsEntryBenglore.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Examination\BoardEnrollments\Transactions\BoardDetailsEntry_Chennai.aspx.designer.vb">
       <DependentUpon>BoardDetailsEntry_Chennai.aspx</DependentUpon>
     </Compile>
@@ -498,6 +491,13 @@
     </Compile>
     <Compile Include="Examination\Reports\BoardReports\BoardDetailsReportChennai.aspx.vb">
       <DependentUpon>BoardDetailsReportChennai.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Examination\Reports\BoardReports\BoardDetailsReportKarnataka.aspx.designer.vb">
+      <DependentUpon>BoardDetailsReportKarnataka.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examination\Reports\BoardReports\BoardDetailsReportKarnataka.aspx.vb">
+      <DependentUpon>BoardDetailsReportKarnataka.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Examination\Reports\BoardReports\BoardDetailsReportMumbai.aspx.designer.vb">
@@ -981,7 +981,6 @@
     <Content Include="Examination\BoardEnrollments\Transactions\AcademicYearExambranchBoardcollegeMapping.aspx" />
     <Content Include="Examination\BoardEnrollments\Transactions\AcaEbBrdColMapBatch.aspx" />
     <Content Include="Examination\BoardEnrollments\Transactions\BoardCollegeBranchMapping.aspx" />
-    <Content Include="Examination\BoardEnrollments\Transactions\BoardDetailsEntryBenglore.aspx" />
     <Content Include="Examination\BoardEnrollments\Transactions\BoardDetailsEntry_Chennai.aspx" />
     <Content Include="Examination\BoardEnrollments\Transactions\BoardDetails_CBSE.aspx" />
     <Content Include="Examination\BoardEnrollments\Transactions\StudentBoardDetailsEntry.aspx" />
@@ -1193,6 +1192,7 @@
     <Content Include="Examination\Reports\BoardReports\BoardDetailsReport.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardDetailsReportAudit.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardDetailsReportChennai.aspx" />
+    <Content Include="Examination\Reports\BoardReports\BoardDetailsReportKarnataka.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardDetailsReportMumbai.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardTCCBSEPreview.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardTcHome.aspx" />
