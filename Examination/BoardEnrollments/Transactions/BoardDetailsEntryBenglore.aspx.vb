@@ -456,7 +456,7 @@ Public Class BoardDetailsEntryBenglore
         Else
             Arr.Add(UCase(Trim(txtstudent.Text)))
         End If
-
+      
         Return Arr
     End Function
 

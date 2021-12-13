@@ -340,48 +340,6 @@ Public Class Utility
         End Try
     End Function
 
-    Public Function FillUserWise_ExamBranchBanglore(ByVal UserSLNO As Integer, ByVal iCOMACADEMICSLNO As Integer) As Data.DataSet
-        Try
-            ConObj = New Connection
-            oConn = ConObj.GetConnection()
-
-            oComm = New OracleCommand
-            oParam = New OracleParameter
-            oAdap = New OracleClient.OracleDataAdapter
-            Ds = New DataSet
-
-            oComm.CommandText = "USERWISE_BANGLORE"
-            oComm.Connection = oConn
-            oComm.CommandType = CommandType.StoredProcedure
-
-            'ADD IN PARAMETER NAME USERSLNO
-            oParam = oComm.Parameters.Add("iUSERSLNO", OracleType.Number)
-            oParam.Direction = ParameterDirection.Input
-            oParam.Value = UserSLNO
-
-
-            'ADD IN PARAMETER NAME iCOMACADEMICSLNO
-            oParam = oComm.Parameters.Add("iCOMACADEMICSLNO", OracleType.Number)
-            oParam.Direction = ParameterDirection.Input
-            oParam.Value = iCOMACADEMICSLNO
-
-            oParam = oComm.Parameters.Add("DATACUR", OracleType.Cursor)
-            oParam.Direction = ParameterDirection.Output
-
-            oAdap.SelectCommand = oComm
-            oAdap.Fill(Ds)
-
-            Return Ds
-
-        Catch oex As OracleException
-            Throw oex
-        Catch ex As Exception
-            Throw ex
-        Finally
-            If Not ConObj Is Nothing Then ConObj.Free()
-        End Try
-    End Function
-
     Public Function FillUserWiseADM_ExamBranchMumbai(ByVal iCOMACADEMICSLNO As Integer) As Data.DataSet
         Try
             ConObj = New Connection
@@ -556,6 +514,49 @@ Public Class Utility
             oComm.Connection = oConn
             oComm.CommandType = CommandType.StoredProcedure
 
+
+
+            'ADD IN PARAMETER NAME iCOMACADEMICSLNO
+            oParam = oComm.Parameters.Add("iCOMACADEMICSLNO", OracleType.Number)
+            oParam.Direction = ParameterDirection.Input
+            oParam.Value = iCOMACADEMICSLNO
+
+            oParam = oComm.Parameters.Add("DATACUR", OracleType.Cursor)
+            oParam.Direction = ParameterDirection.Output
+
+            oAdap.SelectCommand = oComm
+            oAdap.Fill(Ds)
+
+            Return Ds
+
+        Catch oex As OracleException
+            Throw oex
+        Catch ex As Exception
+            Throw ex
+        Finally
+            If Not ConObj Is Nothing Then ConObj.Free()
+        End Try
+    End Function
+
+
+    Public Function FillUserWise_ExamBranchBanglore(ByVal UserSLNO As Integer, ByVal iCOMACADEMICSLNO As Integer) As Data.DataSet
+        Try
+            ConObj = New Connection
+            oConn = ConObj.GetConnection()
+
+            oComm = New OracleCommand
+            oParam = New OracleParameter
+            oAdap = New OracleClient.OracleDataAdapter
+            Ds = New DataSet
+
+            oComm.CommandText = "USERWISE_BANGLORE"
+            oComm.Connection = oConn
+            oComm.CommandType = CommandType.StoredProcedure
+
+            'ADD IN PARAMETER NAME USERSLNO
+            oParam = oComm.Parameters.Add("iUSERSLNO", OracleType.Number)
+            oParam.Direction = ParameterDirection.Input
+            oParam.Value = UserSLNO
 
 
             'ADD IN PARAMETER NAME iCOMACADEMICSLNO
