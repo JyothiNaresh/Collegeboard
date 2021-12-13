@@ -7,7 +7,7 @@ Public Class home
 
 #Region " Web Form Designer Generated Code "
 
-    'This call is required by the Web Form Designer.
+    'Test comment.
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
 
     End Sub
