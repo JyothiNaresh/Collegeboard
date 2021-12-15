@@ -191,9 +191,10 @@ Public Class BoardDetailsEntryBenglore
             txtmedium.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("MEDIUM")), "", Ds.Tables(0).Rows(0)("MEDIUM"))
 
             txtsubcaste.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("SUBCASTE")), "", Ds.Tables(0).Rows(0)("SUBCASTE"))
+            txtother.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("OTHER")), "", Ds.Tables(0).Rows(0)("OTHER"))
             fillDrpColl(drpBranchSearch.SelectedValue)
             'AdmBranchComboFill()
-
+            RadioButtonList1.SelectedItem.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("LANGUAGESECOND")), "", Ds.Tables(0).Rows(0)("LANGUAGESECOND"))
             ViewState("ADMNO") = Ds.Tables(0).Rows(0)("ADMNO")
             ViewState("ADMSNO") = Ds.Tables(0).Rows(0)("ADMSNO")
             ViewState("BRANCHSLNO") = Ds.Tables(0).Rows(0)("BRANCHSLNO")
@@ -456,6 +457,18 @@ Public Class BoardDetailsEntryBenglore
         Else
             Arr.Add(UCase(Trim(txtstudent.Text)))
         End If
+        If Trim(RadioButtonList1.SelectedItem.Text) = "" Then                  '--28
+            Arr.Add(System.DBNull.Value)
+        Else
+            Arr.Add(UCase(Trim(RadioButtonList1.SelectedItem.Text)))
+        End If
+
+        If Trim(txtother.Text) = "" Then                  '--28
+            Arr.Add(System.DBNull.Value)
+        Else
+            Arr.Add(UCase(Trim(txtother.Text)))
+        End If
+
 
         Return Arr
     End Function
@@ -544,5 +557,14 @@ Public Class BoardDetailsEntryBenglore
     End Sub
 
 #End Region
+
+    Protected Sub RadioButtonList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RadioButtonList1.SelectedIndexChanged
+        If RadioButtonList1.SelectedValue = 5 Then
+            txtother.ReadOnly = False
+        Else
+            txtother.ReadOnly = True
+        End If
+    End Sub
+
 
 End Class

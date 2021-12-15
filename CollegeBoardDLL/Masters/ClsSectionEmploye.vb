@@ -9,6 +9,7 @@
 '----------------------------------------------------------------------------------------------
 Imports System.Data.OracleClient
 Imports System.Configuration
+Imports CommonDLL
 
 Public Class ClsSectionEmploye
 
