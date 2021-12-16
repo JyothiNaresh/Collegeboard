@@ -897,7 +897,7 @@ Public Class BoardDetailsReportKarnataka
 
             Dim Admno As String
 
-            iReportWidth = 375
+            iReportWidth = 550
 
 
 
@@ -911,42 +911,41 @@ Public Class BoardDetailsReportKarnataka
 
                         If DRE.Length > 0 Then
 
-                            strfile.Append(StrPadding(" <* Board Of Intermediate Education, A.P., Hyderabad * >", iReportWidth, "M") & vbCrLf)
+                            strfile.Append(StrPadding(" <* Board Of Intermediate Education, Karnataka* >", iReportWidth, "M") & vbCrLf)
                             strfile.Append(StrPadding(" <* NOMINAL ROLL * >", iReportWidth, "M") & vbCrLf)
 
                             strfile.Append(StrPadding(" ", 124, "L"))
-                            strfile.Append(StrPadding("I.P.E MARCH, 2020 ", 20, "M") & vbCrLf)
+                            'strfile.Append(StrPadding("I.P.E MARCH, 2020 ", 20, "M") & vbCrLf)
 
                             strfile.Append(StrPadding("EXAM BRANCH  : " & LSTSelEBranch.Items(i).Text, 50, "L"))
                             strfile.Append(StrPadding("(" & LstSelCourse.Items(Z).Text & ")", 20, "M") & vbCrLf)
 
                             StrHead1 = StrPadding("SL.NO", 6, "L") & "|"
-                            StrHead1 &= StrPadding("BOARD ADMNO", 11, "M") & "|"
-                            StrHead1 &= StrPadding(" INDEXNO ", 12, "M") & "|"
-                            StrHead1 &= StrPadding(" GRNO ", 6, "M") & "|"
-                            StrHead1 &= StrPadding(" UDISENO ", 8, "M") & "|"
-                            StrHead1 &= StrPadding("AADHAR NO", 12, "M") & "|"
-
-
+                            StrHead1 &= StrPadding("ADMNO", 9, "L") & "|"
+                            StrHead1 &= StrPadding("BOARD ADMNO", 11, "L") & "|"
+                            StrHead1 &= StrPadding("STUDENT NO", 12, "L") & "|"
+                            StrHead1 &= StrPadding("SATS NO", 8, "L") & "|"
+                            StrHead1 &= StrPadding("Student Name(Board)", 36, "L") & "|"
                             StrHead1 &= StrPadding("Student Name", 36, "L") & "|"
                             StrHead1 &= StrPadding("Father Name ", 34, "L") & "|"
-                            StrHead1 &= StrPadding("Student Name(Board)", 36, "L") & "|"
-                            StrHead1 &= StrPadding("Sex", 5, "M") & "|"
-                            StrHead1 &= StrPadding("SSC/JR Details", 14, "M") & "|"
-                            StrHead1 &= StrPadding("Com-Code", 8, "M") & "|"
-                            StrHead1 &= StrPadding("Category", 8, "M") & "|"
-                            'StrHead1 &= StrPadding("Handicapped", 11, "M") & "|"
-                            StrHead1 &= StrPadding("Medium", 11, "M") & "|"
-                            StrHead1 &= StrPadding("Sec_Lang", 12, "M") & "|"
-                            StrHead1 &= StrPadding("GROUP", 7, "M") & "|"
-                            StrHead1 &= StrPadding("BOARD BRANCH", 30, "M") & "|"
-                            StrHead1 &= StrPadding("ADM TYPE", 8, "M") & "|"
-                            StrHead1 &= StrPadding("ADM STATUS", 10, "M") & "|"
-                            StrHead1 &= StrPadding("  ADMNO  ", 9, "M") & "|"
-                            StrHead1 &= StrPadding("COURSE", 10, "M") & "|"
-                            StrHead1 &= StrPadding("ADM BRANCH", 30, "M") & "|"
-                            StrHead1 &= StrPadding(" NSPIRA_ADMNO ", 14, "M") & "|"
-                            StrHead1 &= vbCrLf
+                            StrHead1 &= StrPadding("Mother Name ", 34, "L") & "|"
+                            StrHead1 &= StrPadding("Nationality", 12, "L") & "|"
+                            StrHead1 &= StrPadding("Religion", 12, "L") & "|"
+                            StrHead1 &= StrPadding("Caste", 10, "L") & "|"
+                            StrHead1 &= StrPadding("Sub-Caste", 10, "L") & "|"
+                            StrHead1 &= StrPadding("Gender", 7, "L") & "|"
+                            StrHead1 &= StrPadding("Working Days", 14, "L") & "|"
+                            StrHead1 &= StrPadding("Working Present", 17, "L") & "|"
+                            StrHead1 &= StrPadding("Last Attended", 14, "L") & "|"
+                            StrHead1 &= StrPadding("Conduct", 10, "L") & "|"
+                            StrHead1 &= StrPadding("Code", 6, "L") & "|"
+                            StrHead1 &= StrPadding("College", 60, "L") & "|"
+                            StrHead1 &= StrPadding("DateofAdmission", 16, "L") & "|"
+                            StrHead1 &= StrPadding("DOB", 12, "L") & "|"
+                            StrHead1 &= StrPadding("Medium", 10, "L") & "|"
+                            StrHead1 &= StrPadding("Subjects", 70, "L") & "|"
+                            StrHead1 &= StrPadding("Course", 10, "L") & "|"
+                            StrHead1 &= StrPadding("Branch", 45, "L") & "|"
 
                             strfile.Append(PrintLines("-", iReportWidth))
                             strfile.Append(StrHead1)
@@ -955,37 +954,31 @@ Public Class BoardDetailsReportKarnataka
                             For S As Integer = 0 To DRE.Length - 1
 
                                 strfile = strfile.Append(StrPadding(S + 1, 6, "L") & "|")
-                                'If ChkAdmNo.Checked = True Then
-                                ' strfile.Append(StrPadding(DRE(S)("ADMNO").ToString, 9, "M") & "|")
-                                'End If
-                                strfile.Append(StrPadding(DRE(S)("BOARDADMNO").ToString, 11, "M") & "|")
-                                strfile.Append(StrPadding(DRE(S)("CODE").ToString, 12, "M") & "|")
-                                strfile.Append(StrPadding(DRE(S)("GRNO").ToString, 6, "M") & "|")
-                                strfile.Append(StrPadding(DRE(S)("UDISENO").ToString, 8, "M") & "|")
-                                strfile.Append(StrPadding(DRE(S)("AADHAR_NO").ToString, 12, "M") & "|")
-
+                                strfile.Append(StrPadding(DRE(S)("ADMNO").ToString, 9, "L") & "|")
+                                strfile.Append(StrPadding(DRE(S)("BOARDADMNO").ToString, 11, "L") & "|")
+                                strfile.Append(StrPadding(DRE(S)("STUDENTUNIQNO").ToString, 12, "L") & "|")
+                                strfile.Append(StrPadding(DRE(S)("STUDENTSAT").ToString, 8, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("BOARDNAME").ToString, 36, "L") & "|")
                                 strfile = strfile.Append(StrPadding(DRE(S)("STUDENTNAME").ToString, 36, "L") & "|")
                                 strfile = strfile.Append(StrPadding(DRE(S)("FATHERNAME").ToString, 34, "L") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("BOARDNAME").ToString, 36, "L") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("GENDER").ToString, 5, "M") & "|")
-                                'strfile = strfile.Append(StrPadding(DRE(S)("FATHERNAME").ToString, 34, "L") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("PRV_HTNO").ToString, 14, "M") & "|")
-                                '& "(" & DRE(S)("BYPCODE").ToString & ")"
-                                strfile = strfile.Append(StrPadding(DRE(S)("COMCODE").ToString, 8, "M") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("CATEGORY").ToString, 8, "M") & "|")
-                                ' strfile = strfile.Append(StrPadding(DRE(S)("PH_CAT").ToString, 11, "M") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("MEDIUM").ToString, 11, "M") & "|")
-                                'strfile = strfile.Append(StrPadding(DRE(S)("ILANG").ToString, 7, "M") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("SEC_LANG").ToString, 12, "M") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("GROUPNAME").ToString, 7, "M") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("BOARDBRANCH").ToString, 30, "M") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("ADMTYPE").ToString, 8, "M") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("STATUS").ToString, 10, "M") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("ADMNO").ToString, 9, "M") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("COURSE").ToString, 10, "M") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("ADMBRANCH").ToString, 30, "M") & "|")
-                                strfile = strfile.Append(StrPadding(DRE(S)("NSPIRA_ADMNO").ToString, 14, "M") & "|")
-
+                                strfile = strfile.Append(StrPadding(DRE(S)("MOTHERNAME").ToString, 34, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("NATIONALITY").ToString, 12, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("RELIGION").ToString, 12, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("CASTE").ToString, 10, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("SUBCASTE").ToString, 10, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("GENDER").ToString, 7, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("TOT_WORKDAYS").ToString, 14, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("WORK_DAYSPRE").ToString, 17, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("LASTATTEND").ToString, 14, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("CONDUCT").ToString, 10, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("CODE").ToString, 6, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("COLLEGE").ToString, 60, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("DATEOFADMISSION").ToString, 16, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("DOB").ToString, 12, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("MEDIUM").ToString, 10, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("SUBJECT1").ToString & ";" & DRE(S)("SUBJECT2").ToString & ";" & DRE(S)("SUBJECT3").ToString & ";" & DRE(S)("SUBJECT4").ToString & ";" & DRE(S)("SUBJECT5").ToString & ";" & DRE(S)("SUBJECT6").ToString, 70, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("COURSE").ToString, 10, "L") & "|")
+                                strfile = strfile.Append(StrPadding(DRE(S)("EXAMBRANCHNAME").ToString, 45, "L") & "|")
                                 strfile = strfile.Append(vbCrLf & PrintLines("-", iReportWidth))
                             Next
                             '    End If
@@ -1063,17 +1056,14 @@ Public Class BoardDetailsReportKarnataka
                         If DRE.Length > 0 Then
 
                             StrHead1 = StrPadding("SL.NO,", 6, "L")
-                            StrHead1 &= StrPadding("ADMNO,", 6, "M")
-                            StrHead1 &= StrPadding("BOARD ADMNO,", 12, "M")
-                            StrHead1 &= StrPadding("STUDENT NO,", 12, "M")
-                            StrHead1 &= StrPadding("SATS NO,", 8, "M")
-                            StrHead1 &= StrPadding("GRNO,", 5, "M")
-                            StrHead1 &= StrPadding("UDISENO,", 8, "M")
-                            StrHead1 &= StrPadding("AADHAR NO,", 10, "M")
+                            StrHead1 &= StrPadding("ADMNO,", 6, "L")
+                            StrHead1 &= StrPadding("BOARD ADMNO,", 12, "L")
+                            StrHead1 &= StrPadding("STUDENT NO,", 12, "L")
+                            StrHead1 &= StrPadding("SATS NO,", 8, "L")
                             StrHead1 &= StrPadding("Student Name(Board),", 20, "L")
+                            StrHead1 &= StrPadding("Student Name(Adm),", 18, "L")
                             StrHead1 &= StrPadding("Father Name,", 12, "L")
                             StrHead1 &= StrPadding("Mother Name,", 12, "L")
-                            StrHead1 &= StrPadding("Student Name(Adm),", 18, "L")
                             StrHead1 &= StrPadding("Nationality,", 13, "L")
                             StrHead1 &= StrPadding("Religion,", 10, "L")
                             StrHead1 &= StrPadding("Caste,", 6, "L")
@@ -1087,24 +1077,25 @@ Public Class BoardDetailsReportKarnataka
                             StrHead1 &= StrPadding("College,", 8, "L")
                             StrHead1 &= StrPadding("DateofAdmission,", 16, "L")
                             StrHead1 &= StrPadding("DOB,", 4, "L")
+                            StrHead1 &= StrPadding("MEDIUM,", 7, "L")
+                            StrHead1 &= StrPadding("SUBJECTS,", 9, "L")
+                            StrHead1 &= StrPadding("COURSE,", 7, "L")
+                            StrHead1 &= StrPadding("BRANCH,", 7, "L")
                             
-                             StrHead1 &= vbCrLf
-
-                            'strfile.Append(PrintLines("-", iReportWidth))
                             strfile.Append(StrHead1)
                             strfile.Append(vbCrLf)
-                            'strfile.Append(PrintLines("-", iReportWidth))
+
                             For S As Integer = 0 To DRE.Length - 1
 
                                 strfile = strfile.Append(StrPadding(S + 1, 6, "L"))
                                 strfile = strfile.Append(StrPadding(",", 1, "L"))
-                                strfile = strfile.Append(StrPadding(DRE(S)("ADMNO").ToString, 9, "M"))
+                                strfile = strfile.Append(StrPadding(DRE(S)("ADMNO").ToString, 9, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
-                                strfile.Append(StrPadding(DRE(S)("BOARDADMNO").ToString, 11, "M"))
+                                strfile.Append(StrPadding(DRE(S)("BOARDADMNO").ToString, 15, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
-                                strfile.Append(StrPadding(DRE(S)("STUDENTUNIQNO").ToString, 11, "M"))
+                                strfile.Append(StrPadding(DRE(S)("STUDENTUNIQNO").ToString, 11, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
-                                strfile.Append(StrPadding(DRE(S)("STUDENTSAT").ToString, 11, "M"))
+                                strfile.Append(StrPadding(DRE(S)("STUDENTSAT").ToString, 11, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
                                 strfile = strfile.Append(StrPadding(DRE(S)("BOARDNAME").ToString, 36, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
@@ -1135,29 +1126,20 @@ Public Class BoardDetailsReportKarnataka
                                 strfile.Append(StrPadding(DRE(S)("CODE").ToString, 12, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
                                 strfile.Append(StrPadding(DRE(S)("COLLEGE").ToString, 60, "L"))
-                                strfile.Append(StrPadding(",", 1, "M")))
+                                strfile.Append(StrPadding(",", 1, "M"))
                                 strfile = strfile.Append(StrPadding(DRE(S)("DATEOFADMISSION").ToString, 11, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
-                                strfile = strfile.Append(StrPadding(DRE(S)("DOB").ToString, 12, "M"))
+                                strfile = strfile.Append(StrPadding(DRE(S)("DOB").ToString, 12, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
-
-                                strfile = strfile.Append(StrPadding(DRE(S)("GROUPNAME").ToString, 7, "M"))
+                                strfile = strfile.Append(StrPadding(DRE(S)("MEDIUM").ToString, 7, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
-                                strfile = strfile.Append(StrPadding(DRE(S)("BOARDBRANCH").ToString, 30, "M"))
+                                strfile = strfile.Append(StrPadding(DRE(S)("SUBJECT1").ToString & ";" & DRE(S)("SUBJECT2").ToString & ";" & DRE(S)("SUBJECT3").ToString & ";" & DRE(S)("SUBJECT4").ToString & ";" & DRE(S)("SUBJECT5").ToString & ";" & DRE(S)("SUBJECT6").ToString, 70, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
-                                strfile = strfile.Append(StrPadding(DRE(S)("ADMTYPE").ToString, 8, "M"))
+                                strfile = strfile.Append(StrPadding(DRE(S)("COURSE").ToString, 10, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
-                                strfile = strfile.Append(StrPadding(DRE(S)("STATUS").ToString, 10, "M"))
-                                strfile.Append(StrPadding(",", 1, "M"))
-                                
-                                strfile = strfile.Append(StrPadding(DRE(S)("COURSE").ToString, 10, "M"))
-                                strfile.Append(StrPadding(",", 1, "M"))
-                                strfile = strfile.Append(StrPadding(DRE(S)("ADMBRANCH").ToString, 30, "M"))
-                                strfile.Append(StrPadding(",", 1, "M"))
-                                strfile = strfile.Append(StrPadding(DRE(S)("NSPIRA_ADMNO").ToString, 12, "M"))
-                                strfile.Append(StrPadding(",", 1, "M") & vbCrLf)
-
-                                'strfile = strfile.Append(vbCrLf & PrintLines("-", iReportWidth))
+                                strfile = strfile.Append(StrPadding(DRE(S)("EXAMBRANCHNAME").ToString, 45, "L"))
+                                'strfile.Append(StrPadding(",", 1, "M"))
+                                strfile.Append(vbCrLf)
                             Next
                         End If
 
