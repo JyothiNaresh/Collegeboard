@@ -1135,7 +1135,7 @@ Public Class BoardDetailsReportKarnataka
                                 strfile.Append(StrPadding(DRE(S)("CODE").ToString, 12, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
                                 strfile.Append(StrPadding(DRE(S)("COLLEGE").ToString, 60, "L"))
-                                strfile.Append(StrPadding(",", 1, "M")))
+                                strfile.Append(StrPadding(",", 1, "M"))
                                 strfile = strfile.Append(StrPadding(DRE(S)("DATEOFADMISSION").ToString, 11, "L"))
                                 strfile.Append(StrPadding(",", 1, "M"))
                                 strfile = strfile.Append(StrPadding(DRE(S)("DOB").ToString, 12, "M"))

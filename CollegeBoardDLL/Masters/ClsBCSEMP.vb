@@ -9,6 +9,7 @@
 '----------------------------------------------------------------------------------------------
 Imports System.Data.OracleClient
 Imports System.Configuration
+Imports CommonDLL
 
 Public Class ClsBCSEMP
 
@@ -26,7 +27,7 @@ Public Class ClsBCSEMP
 
 #Region "SingleMode Methods"
 
-  Public Function BCSEmp_Code(ByVal iCode As Integer) As Data.DataSet
+    Public Function BCSEmp_Code(ByVal iCode As Integer) As Data.DataSet
         Try
 
             ObjConn = New Connection

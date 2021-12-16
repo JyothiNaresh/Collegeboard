@@ -82,14 +82,14 @@
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
     </COMReference>
-    <Reference Include="CRVsPackageLib, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+    <Reference Include="CRVsPackageLib, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="ICSharpCode.SharpZipLib">
       <Name>ICSharpCode.SharpZipLib</Name>
       <HintPath>bin\ICSharpCode.SharpZipLib.dll</HintPath>
@@ -175,6 +175,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Examination\BankChallan\BANKSTUDENTCHALLAN11.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BANKSTUDENTCHALLAN1.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Examination\BankChallan\ICICIBANKCHALLAN.vb">
       <DependentUpon>ICICIBANKCHALLAN1.rpt</DependentUpon>
@@ -273,6 +279,13 @@
     </Compile>
     <Compile Include="Examination\BoardEnrollments\Transactions\BoardCollegeBranchMapping.aspx.vb">
       <DependentUpon>BoardCollegeBranchMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examination\BoardEnrollments\Transactions\BoardDetailsEntryBenglore.aspx.designer.vb">
+      <DependentUpon>BoardDetailsEntryBenglore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examination\BoardEnrollments\Transactions\BoardDetailsEntryBenglore.aspx.vb">
+      <DependentUpon>BoardDetailsEntryBenglore.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Examination\BoardEnrollments\Transactions\BoardDetailsEntry_Chennai.aspx.designer.vb">
@@ -687,6 +700,9 @@
     </Compile>
     <Compile Include="Examination\Reports\BoardReports\TCRPTv21.vb">
       <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCRPTv2.rpt</DependentUpon>
     </Compile>
     <Compile Include="Examination\Reports\BoardReports\TCSummary.aspx.vb">
       <DependentUpon>TCSummary.aspx</DependentUpon>
@@ -981,6 +997,7 @@
     <Content Include="Examination\BoardEnrollments\Transactions\AcademicYearExambranchBoardcollegeMapping.aspx" />
     <Content Include="Examination\BoardEnrollments\Transactions\AcaEbBrdColMapBatch.aspx" />
     <Content Include="Examination\BoardEnrollments\Transactions\BoardCollegeBranchMapping.aspx" />
+    <Content Include="Examination\BoardEnrollments\Transactions\BoardDetailsEntryBenglore.aspx" />
     <Content Include="Examination\BoardEnrollments\Transactions\BoardDetailsEntry_Chennai.aspx" />
     <Content Include="Examination\BoardEnrollments\Transactions\BoardDetails_CBSE.aspx" />
     <Content Include="Examination\BoardEnrollments\Transactions\StudentBoardDetailsEntry.aspx" />

@@ -167,7 +167,29 @@
 																	</TD>
                                                                   </TR>
 
+                                                    <TR>																	
+																	<TD style="WIDTH: 122px"><asp:label id="Label161" runat="server" Width="200px" CssClass="LABLES">Languages Studied-II</asp:label></TD>
+																	<TD style="WIDTH: 98px; margin-left: 40px;">
 
+                                                                        <asp:RadioButtonList id="RadioButtonList1" runat="server" RepeatDirection="Horizontal" Width="231px" AutoPostBack="true">
+                                                                        <asp:ListItem Selected="True"  Value="1">English</asp:ListItem>
+                                                                        <asp:ListItem Value="2" >Hindi</asp:ListItem>
+                                                                            <asp:ListItem Value="3" >Sanskrit</asp:ListItem>
+                                                                            <asp:ListItem Value="4" >French</asp:ListItem>
+                                                                             <asp:ListItem Value="5" >Other</asp:ListItem>
+																	                        </asp:RadioButtonList>
+																	</TD>
+																	</TD>
+                                                                  </TR>
+
+                                         <TR>																	
+																	<TD style="WIDTH: 122px"></TD>
+																	<TD style="WIDTH: 98px; margin-left: 40px;">
+
+                                                                       <asp:textbox id="txtother" runat="server" Width="300px" CssClass="textboxASR" MaxLength="20"  ReadOnly="true"></asp:textbox>
+																	</TD>
+																	</TD>
+                                                                  </TR>
                                                                   <TR>
                                                                      
 														<TD class="SubHeading1" vAlign="top">PART-II</TD>

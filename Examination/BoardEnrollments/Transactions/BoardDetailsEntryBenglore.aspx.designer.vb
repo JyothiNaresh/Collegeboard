@@ -410,6 +410,33 @@ Partial Public Class BoardDetailsEntryBenglore
     Protected WithEvents radlanguage As Global.System.Web.UI.WebControls.RadioButtonList
 
     '''<summary>
+    '''Label161 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label161 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''RadioButtonList1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButtonList1 As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
+    '''txtother control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtother As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Label11 control.
     '''</summary>
     '''<remarks>
