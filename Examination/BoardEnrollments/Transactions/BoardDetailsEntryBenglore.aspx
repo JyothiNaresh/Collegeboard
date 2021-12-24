@@ -129,16 +129,18 @@
                                                                 </tr>
 																<TR>																	
 																	<TD style="WIDTH: 122px"><asp:label id="Label29" runat="server" Width="200px" CssClass="LABLES">Whether the Student belongs to SC/ST</asp:label></TD>
-																	<TD style="WIDTH: 98px"><asp:RadioButtonList id="radSCST" runat="server" RepeatDirection="Horizontal" Width="154px">
-                                                                        <asp:ListItem  Value="1">Yes</asp:ListItem>
-                                                                        <asp:ListItem Value="2">N0</asp:ListItem>
-																	                        </asp:RadioButtonList>
+																	<TD style="WIDTH: 98px">
+                                                                        <asp:dropdownlist id="radSCST" runat="server" Width="300px" CssClass="textboxASR" Height="16px">
+                                                                        <asp:ListItem  Value="1">YES</asp:ListItem>
+                                                                        <asp:ListItem  Value="2" Selected="True">NO</asp:ListItem>
+																	                        </asp:dropdownlist>
+
 
 																	</TD>
                                                                     <TD style="WIDTH: 127px"><asp:label id="Label30" runat="server" Width="200px" CssClass="LABLES">Gender</asp:label></TD>
-																	<TD style="WIDTH: 98px"><asp:dropdownlist id="drpgender" runat="server" Width="300px" CssClass="textboxASR" Height="16px">
-                                                                        <asp:ListItem Enabled="true" Value="1">Male</asp:ListItem>
-                                                                        <asp:ListItem  Value="2">Female</asp:ListItem>
+																	<TD style="WIDTH: 98px"><asp:dropdownlist id="drpgender" AutoPostBack="true" runat="server" Width="300px" CssClass="textboxASR" Height="16px">
+                                                                        <asp:ListItem Enabled="true" Value="1">MALE</asp:ListItem>
+                                                                        <asp:ListItem  Value="2">FEMALE</asp:ListItem>
 																	                        </asp:dropdownlist></TD>
 																</TR>
                                                                 <TR>
@@ -158,11 +160,10 @@
                                                                 	<TR>																	
 																	<TD style="WIDTH: 122px"><asp:label id="Label16" runat="server" Width="200px" CssClass="LABLES">Languages Studied</asp:label></TD>
 																	<TD style="WIDTH: 98px; margin-left: 40px;">
-
-                                                                        <asp:RadioButtonList id="radlanguage" runat="server" RepeatDirection="Horizontal" Width="231px">
-                                                                        <asp:ListItem Selected="True"  Value="1">Karnataka</asp:ListItem>
-                                                                        <asp:ListItem Value="2" >English</asp:ListItem>
-																	                        </asp:RadioButtonList>
+                                                                        <asp:dropdownlist id="radlanguage" AutoPostBack="true" runat="server" Width="300px" CssClass="textboxASR" Height="16px">
+                                                                        <asp:ListItem Enabled="true" Value="1">KARNATAKA</asp:ListItem>
+                                                                        <asp:ListItem  Value="2">ENGLISH</asp:ListItem>
+																	                        </asp:dropdownlist>
 																	</TD>
 																	</TD>
                                                                   </TR>
@@ -171,14 +172,13 @@
 																	<TD style="WIDTH: 122px"><asp:label id="Label161" runat="server" Width="200px" CssClass="LABLES">Languages Studied-II</asp:label></TD>
 																	<TD style="WIDTH: 98px; margin-left: 40px;">
 
-                                                                        <asp:RadioButtonList id="RadioButtonList1" runat="server" RepeatDirection="Horizontal" Width="231px" AutoPostBack="true">
-                                                                        <asp:ListItem Selected="True"  Value="1">English</asp:ListItem>
-                                                                        <asp:ListItem Value="2" >Hindi</asp:ListItem>
-                                                                            <asp:ListItem Value="3" >Sanskrit</asp:ListItem>
-                                                                            <asp:ListItem Value="4" >French</asp:ListItem>
-                                                                             <asp:ListItem Value="5" >Other</asp:ListItem>
-																	                        </asp:RadioButtonList>
-																	</TD>
+                                                                        <asp:dropdownlist id="RadioButtonList2" AutoPostBack="true" runat="server" Width="300px" CssClass="textboxASR" Height="16px">
+                                                                         <asp:ListItem Selected="True"  Value="1">ENGLISH</asp:ListItem>
+                                                                        <asp:ListItem Value="2" >HINDI</asp:ListItem>
+                                                                            <asp:ListItem Value="3" >SANSKRIT</asp:ListItem>
+                                                                            <asp:ListItem Value="4" >FRENCH</asp:ListItem>
+                                                                             <asp:ListItem Value="5" >OTHER</asp:ListItem>
+																	                        </asp:dropdownlist>																	</TD>
 																	</TD>
                                                                   </TR>
 
@@ -218,10 +218,11 @@
 																	<TD style="WIDTH: 98px; margin-left: 40px;"><asp:textbox id="TxtDob" runat="server" Width="300px" CssClass="textboxASR" MaxLength="20" placeholder="dd-mm-yyyy"></asp:textbox></TD>
                                                                       <TD style="WIDTH: 127px"><asp:label id="Label44" runat="server" Width="200px" CssClass="LABLES">Whether Qualified for promotion to the higher standard</asp:label></TD>
 																	<TD style="WIDTH: 98px">
-                                                                        <asp:RadioButtonList id="ddlQualClass_words" runat="server" RepeatDirection="Horizontal">
-                                                                        <asp:ListItem Selected="True"  Value="1">Yes</asp:ListItem>
-                                                                        <asp:ListItem Value="2" >N0</asp:ListItem>
-																	                        </asp:RadioButtonList>
+                                                                     <asp:dropdownlist id="ddlQualClass_words" runat="server" Width="300px" CssClass="textboxASR" Height="16px">
+                                                                        <asp:ListItem  Value="1" Selected="True">YES</asp:ListItem>
+                                                                        <asp:ListItem  Value="2" >NO</asp:ListItem>
+																	                        </asp:dropdownlist>
+
 																	</TD>
 																</TR>
                                                     <tr>
@@ -235,10 +236,12 @@
 																																	
 																	<TD style="WIDTH: 122px"><asp:label id="Label33" runat="server" Width="200px" CssClass="LABLES">Standar in which the pupil was studyig at the time of leaving the college(inwords)</asp:label></TD>
 																	<TD style="WIDTH: 98px; margin-left: 40px;">
-                                                                        <asp:RadioButtonList id="ddlLastStudied" runat="server" RepeatDirection="Horizontal" Width="243px">
-                                                                        <asp:ListItem Selected="True"  Value="1">FIRST PUC</asp:ListItem>
-                                                                        <asp:ListItem Value="2" >SECOND PUC</asp:ListItem>
-																	                        </asp:RadioButtonList>
+                                                           
+
+                                                                         <asp:dropdownlist id="ddlLastStudied" AutoPostBack="true" runat="server" Width="300px" CssClass="textboxASR" Height="16px">
+                                                                        <asp:ListItem Enabled="true" Value="1" Selected>FIRST PUC</asp:ListItem>
+                                                                        <asp:ListItem  Value="2">SECOND PUC</asp:ListItem>
+																	                        </asp:dropdownlist>
 																	</TD>
                                                                     
 																</TR>
@@ -254,10 +257,11 @@
 																	<TD style="WIDTH: 98px; margin-left: 40px;"><asp:textbox id="txtDateofAdm" runat="server" Width="300px" CssClass="textboxASR" MaxLength="20"></asp:textbox></TD>
                                                                     <TD style="WIDTH: 127px"><asp:label id="Label38" runat="server" Width="200px" CssClass="LABLES">Whether the student has paid all the fees dues to college</asp:label></TD>
 																	<TD style="WIDTH: 98px">
-                                                                        <asp:RadioButtonList id="RadioPaid" runat="server" RepeatDirection="Horizontal">
-                                                                        <asp:ListItem Selected="True"  Value="1">Yes</asp:ListItem>
-                                                                        <asp:ListItem Value="2" >N0</asp:ListItem>
-																	                        </asp:RadioButtonList>
+                                                                       
+                                                                         <asp:dropdownlist id="RadioPaid" runat="server" Width="300px" CssClass="textboxASR" Height="16px">
+                                                                        <asp:ListItem  Value="1" Selected="True">YES</asp:ListItem>
+                                                                        <asp:ListItem  Value="2" >NO</asp:ListItem>
+																	                        </asp:dropdownlist>
 																	</TD>
 																</TR>
 																

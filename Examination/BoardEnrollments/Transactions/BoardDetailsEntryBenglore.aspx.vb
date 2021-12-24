@@ -119,14 +119,6 @@ Public Class BoardDetailsEntryBenglore
         drpBranchSearch.DataValueField = "EXAMBRANCHSLNO"
         drpBranchSearch.DataBind()
     End Sub
-    'Private Sub AdmBranchComboFill()
-    '    Dim Ds As DataSet
-    '    Ds = ClsUty.FillUserWiseADM_ExamBranchChennai(Session("COMACADEMICSLNO"))
-    '    drpAdmBranch.DataSource = Ds
-    '    drpAdmBranch.DataTextField = "BRANCHNAME"
-    '    drpAdmBranch.DataValueField = "ADMBRANCHSLNO"
-    '    drpAdmBranch.DataBind()
-    'End Sub
 
 
     Private Sub fillDrpColl(ByVal EBSLNO As Integer)
@@ -155,24 +147,20 @@ Public Class BoardDetailsEntryBenglore
             TxtBFname.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("FATHERNAME")), "", Ds.Tables(0).Rows(0)("FATHERNAME"))
             TxtBMname.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("MOTHERNAME")), "", Ds.Tables(0).Rows(0)("MOTHERNAME"))
             txtNationality.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("NATIONALITY")), "", Ds.Tables(0).Rows(0)("NATIONALITY"))
-            If IsDBNull(Ds.Tables(0).Rows(0)("SCHEDULE_CASTE")) Then
-            Else
-                radSCST.SelectedItem.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("SCHEDULE_CASTE")), "", Ds.Tables(0).Rows(0)("SCHEDULE_CASTE"))
 
-            End If
-
+            radSCST.SelectedValue = IIf(IsDBNull(Ds.Tables(0).Rows(0)("SCHEDULE_CASTE")), "", Ds.Tables(0).Rows(0)("SCHEDULE_CASTE"))
 
 
             txtcaste.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("CASTE")), "", Ds.Tables(0).Rows(0)("CASTE"))
             txtreligion.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("RELIGION")), "", Ds.Tables(0).Rows(0)("RELIGION"))
             TxtDob.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("DOB")), "", Ds.Tables(0).Rows(0)("DOB"))
-            'fillscsctrad()
-            ddlLastStudied.SelectedItem.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("LAST_STUDIED")), "", Ds.Tables(0).Rows(0)("LAST_STUDIED"))
 
+
+            ddlLastStudied.SelectedValue = IIf(IsDBNull(Ds.Tables(0).Rows(0)("LAST_STUDIED")), "", Ds.Tables(0).Rows(0)("LAST_STUDIED"))
 
             drpgender.SelectedItem.Value = IIf(IsDBNull(Ds.Tables(0).Rows(0)("GENDER")), "", Ds.Tables(0).Rows(0)("GENDER"))
-            ddlQualClass_words.SelectedItem.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("QUAL_CLASS_WORDS")), "", Ds.Tables(0).Rows(0)("QUAL_CLASS_WORDS"))
-            RadioPaid.SelectedValue = IIf(IsDBNull(Ds.Tables(0).Rows(0)("DUES_PAID")), "", Ds.Tables(0).Rows(0)("DUES_PAID"))
+            ddlQualClass_words.SelectedItem.Value = IIf(IsDBNull(Ds.Tables(0).Rows(0)("QUAL_CLASS_WORDS")), "", Ds.Tables(0).Rows(0)("QUAL_CLASS_WORDS"))
+            RadioPaid.SelectedItem.Value = IIf(IsDBNull(Ds.Tables(0).Rows(0)("DUES_PAID")), "", Ds.Tables(0).Rows(0)("DUES_PAID"))
             txtConcession.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("CONCESSION")), "", Ds.Tables(0).Rows(0)("CONCESSION"))
             txtTotWork.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("TOT_WORKDAYS")), "", Ds.Tables(0).Rows(0)("TOT_WORKDAYS"))
             txtWorkPre.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("WORK_DAYSPRE")), "", Ds.Tables(0).Rows(0)("WORK_DAYSPRE"))
@@ -187,14 +175,15 @@ Public Class BoardDetailsEntryBenglore
             txtSubject2.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("SUBJECT2")), "", Ds.Tables(0).Rows(0)("SUBJECT2"))
             txtSubject3.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("SUBJECT3")), "", Ds.Tables(0).Rows(0)("SUBJECT3"))
             txtSubject4.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("SUBJECT4")), "", Ds.Tables(0).Rows(0)("SUBJECT4"))
-            radlanguage.SelectedItem.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("SUBJECT5")), "", Ds.Tables(0).Rows(0)("SUBJECT5"))
+            radlanguage.SelectedItem.Value = IIf(IsDBNull(Ds.Tables(0).Rows(0)("LAST_STUDIED")), "", Ds.Tables(0).Rows(0)("LAST_STUDIED"))
             txtmedium.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("MEDIUM")), "", Ds.Tables(0).Rows(0)("MEDIUM"))
 
             txtsubcaste.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("SUBCASTE")), "", Ds.Tables(0).Rows(0)("SUBCASTE"))
             txtother.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("OTHER")), "", Ds.Tables(0).Rows(0)("OTHER"))
             fillDrpColl(drpBranchSearch.SelectedValue)
             'AdmBranchComboFill()
-            RadioButtonList1.SelectedItem.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("LANGUAGESECOND")), "", Ds.Tables(0).Rows(0)("LANGUAGESECOND"))
+            ' RadioButtonList1.SelectedItem.Text = IIf(IsDBNull(Ds.Tables(0).Rows(0)("LANGUAGESECOND")), "", Ds.Tables(0).Rows(0)("LANGUAGESECOND"))
+            RadioButtonList2.SelectedItem.Value = 3
             ViewState("ADMNO") = Ds.Tables(0).Rows(0)("ADMNO")
             ViewState("ADMSNO") = Ds.Tables(0).Rows(0)("ADMSNO")
             ViewState("BRANCHSLNO") = Ds.Tables(0).Rows(0)("BRANCHSLNO")
@@ -324,29 +313,29 @@ Public Class BoardDetailsEntryBenglore
             Arr.Add(UCase(Trim(txtcaste.Text)))
         End If
 
-        If Trim(radSCST.SelectedItem.Text) = "" Then                    '--8
+        If Trim(radSCST.SelectedItem.Value) = "" Then                    '--8
             Arr.Add(System.DBNull.Value)
         Else
-            Arr.Add(Trim(radSCST.SelectedItem.Text))
+            Arr.Add(Trim(radSCST.SelectedItem.Value))
         End If
 
 
-        If Trim(drpgender.SelectedItem.Text) = "" Then                    '--9
+        If Trim(drpgender.SelectedItem.Value) = "" Then                    '--9
             Arr.Add(System.DBNull.Value)
         Else
-            Arr.Add(UCase(Trim(drpgender.SelectedItem.Text)))
+            Arr.Add(UCase(Trim(drpgender.SelectedItem.Value)))
         End If
 
-        If Trim(ddlQualClass_words.SelectedItem.Text) = "" Then          '--10
+        If Trim(ddlQualClass_words.SelectedItem.Value) = "" Then          '--10
             Arr.Add(System.DBNull.Value)
         Else
-            Arr.Add(Trim(ddlQualClass_words.SelectedItem.Text))
+            Arr.Add(Trim(ddlQualClass_words.SelectedItem.Value))
         End If
 
-        If Trim(ddlLastStudied.SelectedItem.Text) = "" Then              '--11
+        If Trim(ddlLastStudied.SelectedItem.Value) = "" Then              '--11
             Arr.Add(System.DBNull.Value)
         Else
-            Arr.Add(Trim(ddlLastStudied.SelectedItem.Text))
+            Arr.Add(Trim(ddlLastStudied.SelectedItem.Value))
         End If
 
         If Trim(RadioPaid.SelectedValue) = "" Then                     '--12
@@ -386,7 +375,7 @@ Public Class BoardDetailsEntryBenglore
         If Trim(txtIssueCert.Text) = "" Then                '--18
             Arr.Add(System.DBNull.Value)
         Else
-            Arr.Add(UCase(Trim(txtIssueCert.Text)))
+            Arr.Add(Trim(txtIssueCert.Text))
         End If
         Arr.Add(Session("COMACADEMICSLNO"))                 '--19
         Arr.Add(ViewState("UNIQUENO"))                      '--20
@@ -433,7 +422,7 @@ Public Class BoardDetailsEntryBenglore
         If Trim(radlanguage.SelectedItem.Text) = "" Then                  '--28
             Arr.Add(System.DBNull.Value)
         Else
-            Arr.Add(UCase(Trim(radlanguage.SelectedItem.Text)))
+            Arr.Add(UCase(Trim(radlanguage.SelectedItem.Value)))
         End If
         If Trim(txtmedium.Text) = "" Then                  '--29
             Arr.Add(System.DBNull.Value)
@@ -457,10 +446,10 @@ Public Class BoardDetailsEntryBenglore
         Else
             Arr.Add(UCase(Trim(txtstudent.Text)))
         End If
-        If Trim(RadioButtonList1.SelectedItem.Text) = "" Then                  '--28
+        If Trim(RadioButtonList2.SelectedItem.Value) = "" Then                  '--28
             Arr.Add(System.DBNull.Value)
         Else
-            Arr.Add(UCase(Trim(RadioButtonList1.SelectedItem.Text)))
+            Arr.Add(UCase(Trim(RadioButtonList2.SelectedItem.Value)))
         End If
 
         If Trim(txtother.Text) = "" Then                  '--28
@@ -506,7 +495,7 @@ Public Class BoardDetailsEntryBenglore
     Private Sub iBtnSearch_Click(ByVal sender As System.Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles iBtnSearch.Click
         Try
             Dim Ds As DataSet
-            ' ClearControls(1)
+            ClearControls(1)
 
             If Trim(txtAdmNoSearch.Text) = "" Then
                 StartUpScript(txtAdmNoSearch.ID, "Enter Adm.No.")
@@ -546,9 +535,10 @@ Public Class BoardDetailsEntryBenglore
             BrdStu = New ClsBoardEnrollment
             RtnValue = BrdStu.Student_Bengalore_Update(SetEntries())
             If RtnValue = 1 Then
-                StartUpScript("", "Board Details Updated Sucessfully..!")
+
                 ClearControls(0)
-                Page.Response.Redirect(Request.RawUrl.ToString(), False)
+                StartUpScript("", "Board Details Updated Sucessfully..!")
+                ' Page.Response.Redirect(Request.RawUrl.ToString(), False)
             End If
 
         Catch ex As Exception
@@ -558,13 +548,20 @@ Public Class BoardDetailsEntryBenglore
 
 #End Region
 
-    Protected Sub RadioButtonList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RadioButtonList1.SelectedIndexChanged
-        If RadioButtonList1.SelectedValue = 5 Then
+    'Protected Sub RadioButtonList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RadioButtonList1.SelectedIndexChanged
+    '    If RadioButtonList1.SelectedValue = 5 Then
+    '        txtother.ReadOnly = False
+    '    Else
+    '        txtother.ReadOnly = True
+    '    End If
+    'End Sub
+
+
+    Protected Sub RadioButtonList2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RadioButtonList2.SelectedIndexChanged
+        If RadioButtonList2.SelectedValue = 5 Then
             txtother.ReadOnly = False
         Else
             txtother.ReadOnly = True
         End If
     End Sub
-
-
 End Class
