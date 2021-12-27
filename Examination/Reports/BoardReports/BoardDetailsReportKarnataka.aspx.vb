@@ -1012,6 +1012,7 @@ Public Class BoardDetailsReportKarnataka
             StartUpScript(iBtnReport.ID, " Transaction  Failed ")
 
 
+
         Catch ex As Exception
             If GeneralErrorMessage(ex.Message) <> "" Then
                 UpdateLogFile(IIf(Session("USERID") Is Nothing, " ", " USERID := " & Session("USERID").ToString) & vbCrLf & "DATE TIME := " & Today & TimeString & vbCrLf & _
