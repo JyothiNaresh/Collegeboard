@@ -5127,7 +5127,7 @@ Public Class ClsBoardEnrollment
             oParameter.Direction = ParameterDirection.Input
             oParameter.Value = Arr(16)
 
-            oParameter = oCommand.Parameters.Add("iISSUE_CERT", OracleType.VarChar, 4)
+            oParameter = oCommand.Parameters.Add("iISSUE_CERT", OracleType.VarChar, 25)
             oParameter.Direction = ParameterDirection.Input
             oParameter.Value = Arr(17)
 
