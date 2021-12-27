@@ -371,7 +371,7 @@ Partial Public Class BoardDetailsEntryBenglore
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents radSCST As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents radSCST As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Label30 control.
@@ -407,7 +407,34 @@ Partial Public Class BoardDetailsEntryBenglore
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents radlanguage As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents radlanguage As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Label161 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label161 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''RadioButtonList2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButtonList2 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''txtother control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtother As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Label11 control.
@@ -533,7 +560,7 @@ Partial Public Class BoardDetailsEntryBenglore
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ddlQualClass_words As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents ddlQualClass_words As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Label8 control.
@@ -560,7 +587,7 @@ Partial Public Class BoardDetailsEntryBenglore
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ddlLastStudied As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents ddlLastStudied As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Label35 control.
@@ -614,7 +641,7 @@ Partial Public Class BoardDetailsEntryBenglore
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioPaid As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents RadioPaid As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Label39 control.
