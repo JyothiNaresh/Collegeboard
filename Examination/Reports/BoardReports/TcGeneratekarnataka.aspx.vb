@@ -24,7 +24,7 @@ Public Class TcGeneratekarnataka
     'Protected WithEvents Label5 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblStuMname As System.Web.UI.WebControls.Label
     'Protected WithEvents Label50 As System.Web.UI.WebControls.Label
-    Protected WithEvents Label6 As System.Web.UI.WebControls.Label
+    ' Protected WithEvents Label6 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblNationality As System.Web.UI.WebControls.Label
     'Protected WithEvents Label51 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label7 As System.Web.UI.WebControls.Label
@@ -37,9 +37,9 @@ Public Class TcGeneratekarnataka
     'Protected WithEvents Label12 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblDob As System.Web.UI.WebControls.Label
     'Protected WithEvents lblDobwords As System.Web.UI.WebControls.Label
-    Protected WithEvents Label53 As System.Web.UI.WebControls.Label
+    'Protected WithEvents Label53 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblPoint8a As System.Web.UI.WebControls.Label
-    Protected WithEvents Label38 As System.Web.UI.WebControls.Label
+    ' Protected WithEvents Label38 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblPoint8b As System.Web.UI.WebControls.Label
     'Protected WithEvents Label39 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblPoint8c As System.Web.UI.WebControls.Label
@@ -49,12 +49,12 @@ Public Class TcGeneratekarnataka
     'Protected WithEvents lblMedium As System.Web.UI.WebControls.Label
     'Protected WithEvents Label58 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblDoa As System.Web.UI.WebControls.Label
-    Protected WithEvents Label59 As System.Web.UI.WebControls.Label
+    ' Protected WithEvents Label59 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label45 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label14 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label15 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblAdmyear As System.Web.UI.WebControls.Label
-    Protected WithEvents Label60 As System.Web.UI.WebControls.Label
+    ' Protected WithEvents Label60 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label16 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label17 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label18 As System.Web.UI.WebControls.Label
@@ -93,7 +93,7 @@ Public Class TcGeneratekarnataka
     'Protected WithEvents Label41 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label42 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label20 As System.Web.UI.WebControls.Label
-    Protected WithEvents Label21 As System.Web.UI.WebControls.Label
+    '  Protected WithEvents Label21 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label22 As System.Web.UI.WebControls.Label
     'Protected WithEvents Image1 As System.Web.UI.WebControls.Image
     'Protected WithEvents lblDocumentId As System.Web.UI.WebControls.Label

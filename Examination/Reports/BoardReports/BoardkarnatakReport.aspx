@@ -51,10 +51,10 @@
 							</TR>
                            
 
-							<%--<TR>
+							<TR>
 								<TD width="60%" style="HEIGHT: 18px"><asp:label id="Label6" runat="server" Width="100%" Height="15px" CssClass="Lables">Date on which the pupil has actually left the College :</asp:label></TD>
 								<TD style="HEIGHT: 18px"><asp:textbox id="TxtDateleaving" runat="server" Width="110px"></asp:textbox><asp:label id="Label2" runat="server" ForeColor="Red">Ex : dd/mm/yyyy</asp:label></TD>
-							</TR>--%>
+							</TR>
 							<TR>
 								<TD width="60%" style="HEIGHT: 2px"><asp:label id="Label7" runat="server" Width="100%" Height="15px" CssClass="Lables">TC DATE :</asp:label></TD>
 								<TD style="HEIGHT: 2px"><asp:textbox id="TxtTcDate" runat="server" Width="110px"></asp:textbox><asp:label id="Label10" runat="server" ForeColor="Red">Ex : dd/mm/yyyy</asp:label></TD>

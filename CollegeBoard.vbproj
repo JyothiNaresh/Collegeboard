@@ -698,6 +698,13 @@
       <DependentUpon>TcGenerateChennai.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Examination\Reports\BoardReports\TcGeneratekarnataka.aspx.designer.vb">
+      <DependentUpon>TcGeneratekarnataka.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examination\Reports\BoardReports\TcGeneratekarnataka.aspx.vb">
+      <DependentUpon>TcGeneratekarnataka.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Examination\Reports\BoardReports\TcGenerateMumbai.aspx.designer.vb">
       <DependentUpon>TcGenerateMumbai.aspx</DependentUpon>
     </Compile>
@@ -1268,6 +1275,7 @@
     <Content Include="Examination\Reports\BoardReports\Styles.css" />
     <Content Include="Examination\Reports\BoardReports\TcGenerateCBSE.aspx" />
     <Content Include="Examination\Reports\BoardReports\TcGenerateChennai.aspx" />
+    <Content Include="Examination\Reports\BoardReports\TcGeneratekarnataka.aspx" />
     <Content Include="Examination\Reports\BoardReports\TcGenerateMumbai.aspx" />
     <Content Include="Examination\Reports\BoardReports\TcGenerateNew.aspx" />
     <Content Include="Examination\Reports\BoardReports\TcGenerateNewTS.aspx" />
