@@ -520,6 +520,20 @@
       <DependentUpon>BoardDetailsReportMumbai.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Examination\Reports\BoardReports\BoardKarnatakaHome.aspx.designer.vb">
+      <DependentUpon>BoardKarnatakaHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examination\Reports\BoardReports\BoardKarnatakaHome.aspx.vb">
+      <DependentUpon>BoardKarnatakaHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Examination\Reports\BoardReports\BoardkarnatakReport.aspx.designer.vb">
+      <DependentUpon>BoardkarnatakReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examination\Reports\BoardReports\BoardkarnatakReport.aspx.vb">
+      <DependentUpon>BoardkarnatakReport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Examination\Reports\BoardReports\BoardTCCBSEPreview.aspx.designer.vb">
       <DependentUpon>BoardTCCBSEPreview.aspx</DependentUpon>
     </Compile>
@@ -552,6 +566,13 @@
     <Compile Include="Examination\Reports\BoardReports\BoardTCPreview.aspx.vb">
       <DependentUpon>BoardTCPreview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examination\Reports\BoardReports\BoardTCPreviewKarnataka.aspx.designer.vb">
+      <DependentUpon>BoardTCPreviewKarnataka.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examination\Reports\BoardReports\BoardTCPreviewKarnataka.aspx.vb">
+      <DependentUpon>BoardTCPreviewKarnataka.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Examination\Reports\BoardReports\BoardTCPreviewMumbai.aspx.designer.vb">
       <DependentUpon>BoardTCPreviewMumbai.aspx</DependentUpon>
@@ -1211,12 +1232,15 @@
     <Content Include="Examination\Reports\BoardReports\BoardDetailsReportChennai.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardDetailsReportKarnataka.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardDetailsReportMumbai.aspx" />
+    <Content Include="Examination\Reports\BoardReports\BoardKarnatakaHome.aspx" />
+    <Content Include="Examination\Reports\BoardReports\BoardkarnatakReport.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardTCCBSEPreview.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardTcHome.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardTcHomeDummy.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardTCHomeMumbai.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardTcHomeOthers.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardTCPreview.aspx" />
+    <Content Include="Examination\Reports\BoardReports\BoardTCPreviewKarnataka.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardTCPreviewMumbai.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardTCReport.aspx" />
     <Content Include="Examination\Reports\BoardReports\BoardTcReportChennai.aspx" />
