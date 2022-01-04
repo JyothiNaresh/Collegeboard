@@ -1081,156 +1081,6 @@ Public Class ClsBoardEnrollment
         End Try
     End Function
 
-    Public Function Student_Bengalore_Update(ByVal Arr As ArrayList) As Integer
-        Try
-            ObjConn = New Connection
-            oCommand = New OracleCommand
-            oConn = ObjConn.GetConnection()
-
-            oCommand.CommandText = "P_BOARDSTUDENT_BANGLORE_INSERT"
-            oCommand.Connection = oConn
-            oCommand.CommandType = CommandType.StoredProcedure
-
-            oParameter = oCommand.Parameters.Add("iBOARDADMNO", OracleType.VarChar, 100)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(0)
-
-            oParameter = oCommand.Parameters.Add("iBOARDNAME", OracleType.VarChar, 100)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(1)
-
-            oParameter = oCommand.Parameters.Add("iFATHERNAME", OracleType.VarChar, 100)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(2)
-
-            oParameter = oCommand.Parameters.Add("iMOTHERNAME", OracleType.VarChar, 100)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(3)
-
-            oParameter = oCommand.Parameters.Add("iNATIONALITY", OracleType.VarChar, 20)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(4)
-
-            oParameter = oCommand.Parameters.Add("iRELIGION", OracleType.VarChar, 20)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(5)
-
-            oParameter = oCommand.Parameters.Add("iCASTE", OracleType.VarChar, 20)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(6)
-
-            oParameter = oCommand.Parameters.Add("iSCHEDULE_CASTE", OracleType.VarChar, 20)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(7)
-
-            oParameter = oCommand.Parameters.Add("iGENDER", OracleType.VarChar, 20)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(8)
-
-            oParameter = oCommand.Parameters.Add("iQUAL_CLASS_WORDS", OracleType.VarChar, 20)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(9)
-
-            oParameter = oCommand.Parameters.Add("iLAST_STUDIED", OracleType.VarChar, 50)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(10)
-
-            oParameter = oCommand.Parameters.Add("iDUES_PAID", OracleType.VarChar, 20)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(11)
-
-            oParameter = oCommand.Parameters.Add("iCONCESSION", OracleType.VarChar, 20)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(12)
-
-            oParameter = oCommand.Parameters.Add("iTOT_WORKDAYS", OracleType.VarChar, 4)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(13)
-
-            oParameter = oCommand.Parameters.Add("iWORK_DAYSPRE", OracleType.VarChar, 4)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(14)
-
-            oParameter = oCommand.Parameters.Add("iLASTATTEND", OracleType.VarChar, 20)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(15)
-
-            oParameter = oCommand.Parameters.Add("iCONDUCT", OracleType.VarChar, 20)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(16)
-
-            oParameter = oCommand.Parameters.Add("iISSUE_CERT", OracleType.VarChar, 4)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(17)
-
-            oParameter = oCommand.Parameters.Add("iCOMACADEMICSLNO", OracleType.Number)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(18)
-
-            oParameter = oCommand.Parameters.Add("iUNIQUENO", OracleType.Number)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(19)
-
-            oParameter = oCommand.Parameters.Add("iBOARDCOLLEGESLNO", OracleType.Number)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(20)
-
-            oParameter = oCommand.Parameters.Add("iDATEOFADMISSION", OracleType.VarChar, 50)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(21)
-
-            oParameter = oCommand.Parameters.Add("iDOB", OracleType.VarChar, 50)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(22)
-
-            oParameter = oCommand.Parameters.Add("iSUBJECT1", OracleType.VarChar, 50)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(23)
-
-            oParameter = oCommand.Parameters.Add("iSUBJECT2", OracleType.VarChar, 50)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(24)
-
-            oParameter = oCommand.Parameters.Add("iSUBJECT3", OracleType.VarChar, 50)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(25)
-
-            oParameter = oCommand.Parameters.Add("iSUBJECT4", OracleType.VarChar, 50)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(26)
-
-            oParameter = oCommand.Parameters.Add("iSUBJECT5", OracleType.VarChar, 50)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(27)
-
-            oParameter = oCommand.Parameters.Add("iMEDIUM", OracleType.VarChar, 100)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(28)
-
-            oParameter = oCommand.Parameters.Add("iSUBCASTE", OracleType.VarChar, 100)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(29)
-
-            oParameter = oCommand.Parameters.Add("iSTUDENTSAT", OracleType.VarChar, 100)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(30)
-
-            oParameter = oCommand.Parameters.Add("iSTUDENTUNIQNO", OracleType.VarChar, 100)
-            oParameter.Direction = ParameterDirection.Input
-            oParameter.Value = Arr(31)
-
-            oCommand.ExecuteNonQuery()
-            Return 1
-
-        Catch Oex As OracleException
-            Throw Oex
-        Catch ex As Exception
-            Throw ex
-        Finally
-            If Not ObjConn Is Nothing Then ObjConn.Free()
-        End Try
-    End Function
-
 
     Public Function GetDataForStudent_Benglore(ByVal PADMSNO As Integer, ByVal PBRANCHSLNO As Integer, ByVal PCOMACADEMICSLNO As Integer) As DataSet
         Try
@@ -5245,163 +5095,163 @@ Public Class ClsBoardEnrollment
         Return ds
     End Function
 
-    'Public Function Student_Bengalore_Update(ByVal Arr As ArrayList) As Integer
-    '    Try
-    '        ObjConn = New Connection
-    '        oCommand = New OracleCommand
-    '        oConn = ObjConn.GetConnection()
+    Public Function Student_Bengalore_Update(ByVal Arr As ArrayList) As Integer
+        Try
+            ObjConn = New Connection
+            oCommand = New OracleCommand
+            oConn = ObjConn.GetConnection()
 
-    '        oCommand.CommandText = "P_BOARDSTUDENT_BANGLORE_INSERT"
-    '        oCommand.Connection = oConn
-    '        oCommand.CommandType = CommandType.StoredProcedure
+            oCommand.CommandText = "P_BOARDSTUDENT_BANGLORE_INSERT"
+            oCommand.Connection = oConn
+            oCommand.CommandType = CommandType.StoredProcedure
 
-    '        oParameter = oCommand.Parameters.Add("iBOARDADMNO", OracleType.VarChar, 100)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(0)
+            oParameter = oCommand.Parameters.Add("iBOARDADMNO", OracleType.VarChar, 100)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(0)
 
-    '        oParameter = oCommand.Parameters.Add("iBOARDNAME", OracleType.VarChar, 100)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(1)
+            oParameter = oCommand.Parameters.Add("iBOARDNAME", OracleType.VarChar, 100)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(1)
 
-    '        oParameter = oCommand.Parameters.Add("iFATHERNAME", OracleType.VarChar, 100)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(2)
+            oParameter = oCommand.Parameters.Add("iFATHERNAME", OracleType.VarChar, 100)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(2)
 
-    '        oParameter = oCommand.Parameters.Add("iMOTHERNAME", OracleType.VarChar, 100)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(3)
+            oParameter = oCommand.Parameters.Add("iMOTHERNAME", OracleType.VarChar, 100)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(3)
 
-    '        oParameter = oCommand.Parameters.Add("iNATIONALITY", OracleType.VarChar, 20)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(4)
+            oParameter = oCommand.Parameters.Add("iNATIONALITY", OracleType.VarChar, 20)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(4)
 
-    '        oParameter = oCommand.Parameters.Add("iRELIGION", OracleType.VarChar, 20)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(5)
+            oParameter = oCommand.Parameters.Add("iRELIGION", OracleType.VarChar, 20)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(5)
 
-    '        oParameter = oCommand.Parameters.Add("iCASTE", OracleType.VarChar, 20)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(6)
+            oParameter = oCommand.Parameters.Add("iCASTE", OracleType.VarChar, 20)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(6)
 
-    '        oParameter = oCommand.Parameters.Add("iSCHEDULE_CASTE", OracleType.VarChar, 20)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(7)
+            oParameter = oCommand.Parameters.Add("iSCHEDULE_CASTE", OracleType.VarChar, 20)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(7)
 
-    '        oParameter = oCommand.Parameters.Add("iGENDER", OracleType.VarChar, 20)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(8)
+            oParameter = oCommand.Parameters.Add("iGENDER", OracleType.VarChar, 20)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(8)
 
-    '        oParameter = oCommand.Parameters.Add("iQUAL_CLASS_WORDS", OracleType.VarChar, 20)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(9)
+            oParameter = oCommand.Parameters.Add("iQUAL_CLASS_WORDS", OracleType.VarChar, 20)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(9)
 
-    '        oParameter = oCommand.Parameters.Add("iLAST_STUDIED", OracleType.VarChar, 50)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(10)
+            oParameter = oCommand.Parameters.Add("iLAST_STUDIED", OracleType.VarChar, 50)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(10)
 
-    '        oParameter = oCommand.Parameters.Add("iDUES_PAID", OracleType.VarChar, 20)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(11)
+            oParameter = oCommand.Parameters.Add("iDUES_PAID", OracleType.VarChar, 20)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(11)
 
-    '        oParameter = oCommand.Parameters.Add("iCONCESSION", OracleType.VarChar, 20)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(12)
+            oParameter = oCommand.Parameters.Add("iCONCESSION", OracleType.VarChar, 20)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(12)
 
-    '        oParameter = oCommand.Parameters.Add("iTOT_WORKDAYS", OracleType.VarChar, 4)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(13)
+            oParameter = oCommand.Parameters.Add("iTOT_WORKDAYS", OracleType.VarChar, 4)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(13)
 
-    '        oParameter = oCommand.Parameters.Add("iWORK_DAYSPRE", OracleType.VarChar, 4)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(14)
+            oParameter = oCommand.Parameters.Add("iWORK_DAYSPRE", OracleType.VarChar, 4)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(14)
 
-    '        oParameter = oCommand.Parameters.Add("iLASTATTEND", OracleType.VarChar, 20)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(15)
+            oParameter = oCommand.Parameters.Add("iLASTATTEND", OracleType.VarChar, 20)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(15)
 
-    '        oParameter = oCommand.Parameters.Add("iCONDUCT", OracleType.VarChar, 20)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(16)
+            oParameter = oCommand.Parameters.Add("iCONDUCT", OracleType.VarChar, 20)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(16)
 
-    '        oParameter = oCommand.Parameters.Add("iISSUE_CERT", OracleType.VarChar, 25)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(17)
+            oParameter = oCommand.Parameters.Add("iISSUE_CERT", OracleType.VarChar, 25)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(17)
 
-    '        oParameter = oCommand.Parameters.Add("iCOMACADEMICSLNO", OracleType.Number)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(18)
+            oParameter = oCommand.Parameters.Add("iCOMACADEMICSLNO", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(18)
 
-    '        oParameter = oCommand.Parameters.Add("iUNIQUENO", OracleType.Number)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(19)
+            oParameter = oCommand.Parameters.Add("iUNIQUENO", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(19)
 
-    '        oParameter = oCommand.Parameters.Add("iBOARDCOLLEGESLNO", OracleType.Number)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(20)
+            oParameter = oCommand.Parameters.Add("iBOARDCOLLEGESLNO", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(20)
 
-    '        oParameter = oCommand.Parameters.Add("iDATEOFADMISSION", OracleType.VarChar, 50)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(21)
+            oParameter = oCommand.Parameters.Add("iDATEOFADMISSION", OracleType.VarChar, 50)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(21)
 
-    '        oParameter = oCommand.Parameters.Add("iDOB", OracleType.VarChar, 50)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(22)
+            oParameter = oCommand.Parameters.Add("iDOB", OracleType.VarChar, 50)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(22)
 
-    '        oParameter = oCommand.Parameters.Add("iSUBJECT1", OracleType.VarChar, 50)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(23)
+            oParameter = oCommand.Parameters.Add("iSUBJECT1", OracleType.VarChar, 50)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(23)
 
-    '        oParameter = oCommand.Parameters.Add("iSUBJECT2", OracleType.VarChar, 50)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(24)
+            oParameter = oCommand.Parameters.Add("iSUBJECT2", OracleType.VarChar, 50)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(24)
 
-    '        oParameter = oCommand.Parameters.Add("iSUBJECT3", OracleType.VarChar, 50)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(25)
+            oParameter = oCommand.Parameters.Add("iSUBJECT3", OracleType.VarChar, 50)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(25)
 
-    '        oParameter = oCommand.Parameters.Add("iSUBJECT4", OracleType.VarChar, 50)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(26)
+            oParameter = oCommand.Parameters.Add("iSUBJECT4", OracleType.VarChar, 50)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(26)
 
-    '        oParameter = oCommand.Parameters.Add("iSUBJECT5", OracleType.VarChar, 50)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(27)
+            oParameter = oCommand.Parameters.Add("iSUBJECT5", OracleType.VarChar, 50)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(27)
 
-    '        oParameter = oCommand.Parameters.Add("iMEDIUM", OracleType.VarChar, 100)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(28)
+            oParameter = oCommand.Parameters.Add("iMEDIUM", OracleType.VarChar, 100)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(28)
 
-    '        oParameter = oCommand.Parameters.Add("iSUBCASTE", OracleType.VarChar, 100)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(29)
+            oParameter = oCommand.Parameters.Add("iSUBCASTE", OracleType.VarChar, 100)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(29)
 
-    '        oParameter = oCommand.Parameters.Add("iSTUDENTSAT", OracleType.VarChar, 100)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(30)
+            oParameter = oCommand.Parameters.Add("iSTUDENTSAT", OracleType.VarChar, 100)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(30)
 
-    '        oParameter = oCommand.Parameters.Add("iSTUDENTUNIQNO", OracleType.VarChar, 100)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(31)
+            oParameter = oCommand.Parameters.Add("iSTUDENTUNIQNO", OracleType.VarChar, 100)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(31)
 
-    '        oParameter = oCommand.Parameters.Add("iLanguageSecond", OracleType.VarChar, 100)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(32)
+            oParameter = oCommand.Parameters.Add("iLanguageSecond", OracleType.VarChar, 100)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(32)
 
-    '        oParameter = oCommand.Parameters.Add("iOTHER", OracleType.VarChar, 100)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = Arr(33)
+            oParameter = oCommand.Parameters.Add("iOTHER", OracleType.VarChar, 100)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Arr(33)
 
-    '        oCommand.ExecuteNonQuery()
-    '        Return 1
+            oCommand.ExecuteNonQuery()
+            Return 1
 
-    '    Catch Oex As OracleException
-    '        Throw Oex
-    '    Catch ex As Exception
-    '        Throw ex
-    '    Finally
-    '        If Not ObjConn Is Nothing Then ObjConn.Free()
-    '    End Try
-    'End Function
+        Catch Oex As OracleException
+            Throw Oex
+        Catch ex As Exception
+            Throw ex
+        Finally
+            If Not ObjConn Is Nothing Then ObjConn.Free()
+        End Try
+    End Function
 
 
     'Public Function GetDataForStudent_Benglore(ByVal PADMSNO As Integer, ByVal PBRANCHSLNO As Integer, ByVal PCOMACADEMICSLNO As Integer) As DataSet

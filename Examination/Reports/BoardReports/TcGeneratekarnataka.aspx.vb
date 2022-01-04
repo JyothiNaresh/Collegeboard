@@ -14,7 +14,7 @@ Public Class TcGeneratekarnataka
     'Protected WithEvents lblClgNameCode As System.Web.UI.WebControls.Label
     'Protected WithEvents lblClgAddress1 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblClgAddress2 As System.Web.UI.WebControls.Label
-    'Protected WithEvents Label47 As System.Web.UI.WebControls.Label
+    'Protected WithEvents Label47 As System.eb.UI.WebControls.Label
     'Protected WithEvents Label3 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblStuName As System.Web.UI.WebControls.Label
     'Protected WithEvents Label48 As System.Web.UI.WebControls.Label
@@ -135,41 +135,41 @@ Public Class TcGeneratekarnataka
 
     Private Sub FillLables(ByVal ds As DataSet)
         Try
-            If DsPriview.Tables(0).Rows(0)("DOCUMENTID") <= 1 Then
-                lblDocumentId.Text = "ORIGINAL"
-            ElseIf DsPriview.Tables(0).Rows(0)("DOCUMENTID") = 2 Then
-                lblDocumentId.Text = "DUPLICATE"
-            ElseIf DsPriview.Tables(0).Rows(0)("DOCUMENTID") > 2 Then
-                lblDocumentId.Text = "TRIPLICATE"
-            End If
+            '  If DsPriview.Tables(0).Rows(0)("DOCUMENTID") <= 1 Then
+            '      lblDocumentId.Text = "ORIGINAL"
+            '  ElseIf DsPriview.Tables(0).Rows(0)("DOCUMENTID") = 2 Then
+            '      lblDocumentId.Text = "DUPLICATE"
+            '  ElseIf DsPriview.Tables(0).Rows(0)("DOCUMENTID") > 2 Then
+            '      lblDocumentId.Text = "TRIPLICATE"
+            '  End If
 
-            lblTCColName.Text = DsPriview.Tables(0).Rows(0)("COLNAME_HEADING").ToString
-            ' lblTCRCNO.Text = DsPriview.Tables(0).Rows(0)("RCNO").ToString
-            lblTcno.Text = DsPriview.Tables(0).Rows(0)("CERTIFICATENO").ToString
-            'lblRcno.Text = DsPriview.Tables(0).Rows(0)("RCNO").ToString
-            LblAdmno.Text = DsPriview.Tables(0).Rows(0)("ADMNO").ToString
+            '  lblTCColName.Text = DsPriview.Tables(0).Rows(0)("COLNAME_HEADING").ToString
+            '  ' lblTCRCNO.Text = DsPriview.Tables(0).Rows(0)("RCNO").ToString
+            '  lblTcno.Text = DsPriview.Tables(0).Rows(0)("CERTIFICATENO").ToString
+            '  'lblRcno.Text = DsPriview.Tables(0).Rows(0)("RCNO").ToString
+            '  LblAdmno.Text = DsPriview.Tables(0).Rows(0)("ADMNO").ToString
 
-            'lblClgNameCode.Text = DsPriview.Tables(0).Rows(0)("COLNAME").ToString
-            LblColAddr.Text = DsPriview.Tables(0).Rows(0)("TCADDR1").ToString + "" + DsPriview.Tables(0).Rows(0)("TCADDR2").ToString
-            ' lblClgAddress2.Text = DsPriview.Tables(0).Rows(0)("TCADDR2").ToString
+            '  'lblClgNameCode.Text = DsPriview.Tables(0).Rows(0)("COLNAME").ToString
+            '  LblColAddr.Text = DsPriview.Tables(0).Rows(0)("TCADDR1").ToString + "" + DsPriview.Tables(0).Rows(0)("TCADDR2").ToString
+            '  ' lblClgAddress2.Text = DsPriview.Tables(0).Rows(0)("TCADDR2").ToString
 
-            lblStuName.Text = DsPriview.Tables(0).Rows(0)("PUPILNAME").ToString
-            lblStuFname.Text = DsPriview.Tables(0).Rows(0)("PARENTNAME").ToString
-            lblStuMname.Text = DsPriview.Tables(0).Rows(0)("MOTHERNAME").ToString
+            '  lblStuName.Text = DsPriview.Tables(0).Rows(0)("PUPILNAME").ToString
+            '  lblStuFname.Text = DsPriview.Tables(0).Rows(0)("PARENTNAME").ToString
+            '  lblStuMname.Text = DsPriview.Tables(0).Rows(0)("MOTHERNAME").ToString
 
-            lblNationality.Text = DsPriview.Tables(0).Rows(0)("RELIGION").ToString
-            lblCaste.Text = DsPriview.Tables(0).Rows(0)("CASTE").ToString
-            lblDob.Text = DsPriview.Tables(0).Rows(0)("DOB").ToString
-            lblDobwords.Text = DsPriview.Tables(0).Rows(0)("DOBWORDS").ToString
+            '  lblNationality.Text = DsPriview.Tables(0).Rows(0)("RELIGION").ToString
+            '  lblCaste.Text = DsPriview.Tables(0).Rows(0)("CASTE").ToString
+            '  lblDob.Text = DsPriview.Tables(0).Rows(0)("DOB").ToString
+            '  lblDobwords.Text = DsPriview.Tables(0).Rows(0)("DOBWORDS").ToString
 
-            'lblPoint8a.Text = DsPriview.Tables(0).Rows(0)("PASS").ToString
-            'lblPoint8b.Text = DsPriview.Tables(0).Rows(0)("FIRTLANG").ToString
-            'lblPoint8c.Text = DsPriview.Tables(0).Rows(0)("SECLANG").ToString
-            'lblPoint8d.Text = DsPriview.Tables(0).Rows(0)("PART3").ToString()
+            '  'lblPoint8a.Text = DsPriview.Tables(0).Rows(0)("PASS").ToString
+            '  'lblPoint8b.Text = DsPriview.Tables(0).Rows(0)("FIRTLANG").ToString
+            '  'lblPoint8c.Text = DsPriview.Tables(0).Rows(0)("SECLANG").ToString
+            '  'lblPoint8d.Text = DsPriview.Tables(0).Rows(0)("PART3").ToString()
 
-            'lblMedium.Text = DsPriview.Tables(0).Rows(0)("MOTHERTANGUE").ToString()
-            lblPoint17.Text = DsPriview.Tables(0).Rows(0)("TCISSUEDDATE").ToString()
-            lblgameplayed.Text = DsPriview.Tables(0).Rows(0)("GAMES").ToString()
+            '  'lblMedium.Text = DsPriview.Tables(0).Rows(0)("MOTHERTANGUE").ToString()
+            '  lblPoint17.Text = DsPriview.Tables(0).Rows(0)("TCISSUEDDATE").ToString()
+            '//  lblgameplayed.Text = DsPriview.Tables(0).Rows(0)("GAMES").ToString()
 
             lblncc.Text = DsPriview.Tables(0).Rows(0)("NCC").ToString()
             lblpoint13a.Text = DsPriview.Tables(0).Rows(0)("DATEOFJOIN").ToString()
@@ -182,7 +182,7 @@ Public Class TcGeneratekarnataka
             lblPoint16.Text = DsPriview.Tables(0).Rows(0)("DATEOFLEAVING").ToString()
             Label55.Text = DsPriview.Tables(0).Rows(0)("TCISSUEDDATE").ToString()
             lblPoint18.Text = DsPriview.Tables(0).Rows(0)("CONDUCT").ToString()
-            Image1.ImageUrl = DsPriview.Tables(0).Rows(0)("LOGOPATH")
+            'Image1.ImageUrl = DsPriview.Tables(0).Rows(0)("LOGOPATH")
 
 
         Catch ex As Exception

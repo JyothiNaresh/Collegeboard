@@ -17,6 +17,7 @@
             .auto-style2 {
                 width: 106px;
             }
+            .lables {}
         </style>
 	</HEAD>
 	<body onload="pageset();" MS_POSITIONING="GridLayout">
@@ -25,11 +26,11 @@
 				cellSpacing="0" cellPadding="0" width="659" align="center">
 				<TR>
 					<TD align="center">
-						<TABLE style="WIDTH: 680px" id="Table1" border="0" cellSpacing="0" cellPadding="0" width="680"
+						<TABLE style="WIDTH: 780px" id="Table1" border="0" cellSpacing="0" cellPadding="0" width="680"
 							align="center">
 							<tr>
 								<td colspan="4">
-									<TABLE style="WIDTH: 621px; HEIGHT: 125px" id="Table4" border="0" cellSpacing="0" cellPadding="0"
+									<%--<TABLE style="WIDTH: 621px; HEIGHT: 125px" id="Table4" border="0" cellSpacing="0" cellPadding="0"
 										width="621" align="center">
 										<TR>
 											<TD vAlign="top" rowSpan="4" width="15%" align="center"><asp:image id="Image1" runat="server" Height="112px" Width="91px"></asp:image></TD>
@@ -64,15 +65,15 @@
 												</TABLE>
 											</TD>
 										</TR>
-									</TABLE>
+									</TABLE>--%>
 								</td>
 							</tr>
 							<TR>
-								<TD colSpan="4">==============================================================================</TD>
+								<TD colSpan="6">==============================================================================</TD>
                                 
 							</TR>
                             <TR>
-														<TD style="WIDTH: 800px" valign="top" align="center" colSpan="4"><asp:label id="Label35" runat="server" Height="10px" Width="100%" Font-Bold="True" Font-Names="Calibri"
+														<TD style="WIDTH: 1000px" valign="top" align="center" colSpan="6"><asp:label id="Label35" runat="server" Height="10px" Width="100%" Font-Bold="True" Font-Names="Calibri"
 																CssClass="lables" Font-Size="Larger">Transfer Certificate</asp:label></TD>
 													</TR>
                             
@@ -119,12 +120,51 @@
 								<TD style="WIDTH: 14px" class="lables" height="10" vAlign="top" align="center"></TD>
 								<TD class="lables" height="10" vAlign="top" align="left"><asp:label id="lblClgAddress2" runat="server" Font-Names="Calibri" Font-Size="Smaller">Label</asp:label></TD>
 							</TR>--%>
+                            <TR>
+								<TD style="WIDTH: 67px; HEIGHT: 25px" class="lables" height="25" align="center"><asp:label id="Label10" runat="server" Height="20px" Width="100%" Font-Bold="True" Font-Names="Calibri"
+										CssClass="lables" Font-Size="Smaller">1</asp:label></TD>
+								<TD style="WIDTH: 321px; HEIGHT: 17px" class="lables" height="17" align="left" >
+									
+                                     <asp:label id="Label11" runat="server" Font-Names="Calibri" Font-Size="Smaller">Name of the College</asp:label>
+
+								</TD>
+								<TD style="WIDTH: 14px; HEIGHT: 25px" class="lables" height="25" align="center"><STRONG>:</STRONG></TD>
+								<TD style="HEIGHT: 17px" class="lables" height="17" align="left"><asp:label id="Label12" runat="server" Font-Names="Calibri" Font-Size="Smaller">Label</asp:label></TD>
+							</TR>
+                            <TR>
+                                <td width="800px">
+                                    <table style="width: 328%">
+                                        <tr>
+                                            <TD style="WIDTH: 67px; HEIGHT: 25px" class="lables" height="25" align="center"><asp:label id="Label15" runat="server" Height="20px" Width="140%" Font-Bold="True" Font-Names="Calibri"
+										CssClass="lables" Font-Size="Smaller">1</asp:label></TD>
+								<TD style="WIDTH: 321px; HEIGHT: 17px" class="lables" height="17" align="left" >
+									
+                                     <asp:label id="Label16" runat="server" Font-Names="Calibri" Font-Size="Smaller">Admission No </asp:label>
+
+								</TD>
+								<TD style="WIDTH: 14px; HEIGHT: 25px" class="lables" height="25" align="center"><STRONG>:</STRONG></TD>
+								<TD style="HEIGHT: 17px" class="lables" height="17" align="left"><asp:label id="Label17" runat="server" Font-Names="Calibri" Font-Size="Smaller">Label</asp:label></TD>
+                                             <TD style="WIDTH: 67px; HEIGHT: 25px" class="lables" height="25" align="center"><asp:label id="Label18" runat="server" Height="20px" Width="100%" Font-Bold="True" Font-Names="Calibri"
+										CssClass="lables" Font-Size="Smaller">1</asp:label></TD>
+								<TD style="WIDTH: 321px; HEIGHT: 17px" class="lables" height="17" align="left" >
+									
+                                     <asp:label id="Label19" runat="server" Font-Names="Calibri" Font-Size="Smaller">Student/SAT No </asp:label>
+
+								</TD>
+								<TD style="WIDTH: 14px; HEIGHT: 25px" class="lables" height="25" align="center"><STRONG>:</STRONG></TD>
+								<TD style="HEIGHT: 17px" class="lables" height="17" align="left"><asp:label id="Label20" runat="server" Font-Names="Calibri" Font-Size="Smaller">Label</asp:label></TD>
+                                        </tr>
+                                    </table>
+
+                                </td>
+								
+							</TR>
 							<TR>
 								<TD style="WIDTH: 67px; HEIGHT: 25px" class="lables" height="25" align="center"><asp:label id="Label47" runat="server" Height="20px" Width="100%" Font-Bold="True" Font-Names="Calibri"
 										CssClass="lables" Font-Size="Smaller">1</asp:label></TD>
 								<TD style="WIDTH: 321px; HEIGHT: 17px" class="lables" height="17" align="left" >
 									
-                                     <asp:label id="Label68" runat="server" Font-Names="Calibri" Font-Size="Smaller">Name of the Pupil</asp:label>
+                                     <asp:label id="Label68" runat="server" Font-Names="Calibri" Font-Size="Smaller">Name of the Student</asp:label>
 
 								</TD>
 								<TD style="WIDTH: 14px; HEIGHT: 25px" class="lables" height="25" align="center"><STRONG>:</STRONG></TD>
@@ -339,13 +379,7 @@
 								<TD style="WIDTH: 14px; HEIGHT: 5px" class="lables" height="5" align="center"><STRONG>:</STRONG></TD>
 								<TD style="HEIGHT: 5px" class="lables" height="5" align="left"><asp:label id="lblncc" runat="server" Font-Names="Calibri" Font-Size="Smaller">Label</asp:label></TD>
 							</TR>
-                            <TR>
-								<TD style="WIDTH: 67px; HEIGHT: 5px" class="lables" height="5" vAlign="top" align="center"><asp:label id="Label26" runat="server" Height="20px" Width="100%" Font-Bold="True" Font-Names="Calibri"
-										CssClass="lables" Font-Size="Smaller">18</asp:label></TD>
-								<TD style="WIDTH: 321px; HEIGHT: 5px" class="lables" height="5" align="left" vAlign="top"><asp:label id="Label27" runat="server" Height="20px" Width="281px" Font-Names="Calibri" Font-Size="Smaller">Games Played</asp:label></TD>
-								<TD style="WIDTH: 14px; HEIGHT: 5px" class="lables" height="5" align="center"><STRONG>:</STRONG></TD>
-								<TD style="HEIGHT: 5px" class="lables" height="5" align="left"><asp:label id="lblgameplayed" runat="server" Font-Names="Calibri" Font-Size="Smaller">Label</asp:label></TD>
-							</TR>
+
 							<TR>
 								<TD style="WIDTH: 67px; HEIGHT: 5px" class="lables" height="5" vAlign="top" align="center"><asp:label id="Label66" runat="server" Height="20px" Width="100%" Font-Bold="True" Font-Names="Calibri"
 										CssClass="lables" Font-Size="Smaller">19</asp:label></TD>
