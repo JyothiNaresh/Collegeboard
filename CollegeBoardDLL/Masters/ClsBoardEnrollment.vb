@@ -4034,6 +4034,52 @@ Public Class ClsBoardEnrollment
         Return ds
     End Function
 
+
+    Public Function P_DTCSTUDENTS_SELECTBENGALORE(ByVal pCaslno As Integer, ByVal pEbslno As Integer, ByVal pBoardClgSlno As Integer, ByVal pAdmno As String) As DataSet
+        Try
+
+            ObjConn = New Connection
+            oConn = ObjConn.GetConnection()
+
+            oCommand = New OracleClient.OracleCommand
+
+            oParameter = New OracleClient.OracleParameter
+            oAdapter = New OracleClient.OracleDataAdapter
+            ds = New Data.DataSet
+
+            oCommand.CommandText = "EXAM_EBTCSTUDENTSBANGLORE"
+            oCommand.Connection = oConn
+            oCommand.CommandType = CommandType.StoredProcedure
+
+            oParameter = oCommand.Parameters.Add("iCOMACADEMICSLNO", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pCaslno
+
+            oParameter = oCommand.Parameters.Add("IEXAMBRANCHSLNO", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pEbslno
+
+            oParameter = oCommand.Parameters.Add("IBOARDCOLLEGESLNO", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pBoardClgSlno
+
+            'ADD IN PARAMETER NAME IUSERID
+            oParameter = oCommand.Parameters.Add("DATACUR", OracleType.Cursor)
+            oParameter.Direction = ParameterDirection.Output
+
+            oAdapter.SelectCommand = oCommand
+            oAdapter.Fill(ds)
+
+        Catch oex As OracleException
+            Throw oex
+        Catch ex As Exception
+            Throw ex
+        Finally
+            If Not ObjConn Is Nothing Then ObjConn.Free()
+        End Try
+        Return ds
+    End Function
+
     Public Function P_TCgenerationNewchennai(ByVal pUniqueno As Integer, ByVal pComacademicslno As Integer, ByVal pboardcollegeslno As Integer, ByVal Pagreeslno As Integer, ByVal tctype As Integer, ByVal iUSERSLNO As Integer) As Data.DataSet
         Try
 

@@ -16,6 +16,7 @@ Imports System.IO
 Imports CollegeBoardDLL
 Public Class BoardkarnatakReport
     Inherits System.Web.UI.Page
+
 #Region " $ Web Form Designer Generated Code "
 
     'This call is required by the Web Form Designer.
@@ -47,13 +48,11 @@ Public Class BoardkarnatakReport
     'Protected WithEvents Label12 As System.Web.UI.WebControls.Label
     'Protected WithEvents Table1 As System.Web.UI.HtmlControls.HtmlTable
     'Protected WithEvents Tablecc As System.Web.UI.HtmlControls.HtmlTable
-    Protected WithEvents d As System.Web.UI.WebControls.DropDownList
-    Protected WithEvents Dropdownlist2 As System.Web.UI.WebControls.DropDownList
-
+    'Protected WithEvents d As System.Web.UI.WebControls.DropDownList
     'Protected WithEvents BtnCc As System.Web.UI.WebControls.Button
     'Protected WithEvents btnCCGenerate As System.Web.UI.WebControls.Button
     'Protected WithEvents Label7 As System.Web.UI.WebControls.Label
-    Protected WithEvents TxtDate As System.Web.UI.WebControls.TextBox
+    'Protected WithEvents TxtDate As System.Web.UI.WebControls.TextBox
     'Protected WithEvents Label10 As System.Web.UI.WebControls.Label
     'Protected WithEvents TxtTcDate As System.Web.UI.WebControls.TextBox
     'Protected WithEvents btnGeneratenewTC As System.Web.UI.WebControls.Button
@@ -70,7 +69,6 @@ Public Class BoardkarnatakReport
     End Sub
 
 #End Region
-
 
 #Region " $ Class Variables"
     Private oConn As OracleConnection 'Connection Object Declaration.
@@ -103,7 +101,7 @@ Public Class BoardkarnatakReport
             If Not IsPostBack Then
                 ButtonsHiding(Me.Page)
                 SetViewStateVariables()
-                ' fillDrpCourse()
+                fillDrpCourse()
                 fillDetails(_Uniqueno)
                 GettingUsertype()
                 Table4.Visible = False
@@ -140,9 +138,9 @@ Public Class BoardkarnatakReport
             TcDum = Session("TcDum")
             Ds = New DataSet
             If TcDum = 1 Then
-                Ds = ClsBE.P_TCgenerationCBSE_Dummy(Me.ViewState("_Uniqueno"), Session("COMACADEMICSLNO"), "", DrpCourse.SelectedItem.Text, DrpQualifiedUniv.SelectedItem.Text, "", "GOOD", DateConversion(TxtDateleaving.Text), DateConversion(TxtTcDate.Text), Me.ViewState("_BoardCollegeSlno"), 1, genprv, DrpCourse.SelectedItem.Value, Drpbieucs.SelectedValue, DrpIIyear.SelectedItem.Value, Session("USERSLNO"))
+                Ds = ClsBE.P_TCgeneration_Dummy(Me.ViewState("_Uniqueno"), Session("COMACADEMICSLNO"), "", DrpCourse.SelectedItem.Text, DrpQualifiedUniv.SelectedItem.Text, "", "GOOD", DateConversion(TxtDateleaving.Text), DateConversion(TxtTcDate.Text), Me.ViewState("_BoardCollegeSlno"), 1, genprv, DrpCourse.SelectedItem.Value, Drpbieucs.SelectedValue, DrpIIyear.SelectedItem.Value, Session("USERSLNO"))
             Else
-                Ds = ClsBE.P_TCgenerationCBSE_Dummy(Me.ViewState("_Uniqueno"), Session("COMACADEMICSLNO"), "", DrpCourse.SelectedItem.Text, DrpQualifiedUniv.SelectedItem.Text, "", "GOOD", DateConversion(TxtDateleaving.Text), DateConversion(TxtTcDate.Text), Me.ViewState("_BoardCollegeSlno"), 1, genprv, DrpCourse.SelectedItem.Value, Drpbieucs.SelectedValue, DrpIIyear.SelectedItem.Value, Session("USERSLNO"))
+                Ds = ClsBE.P_TCgeneration(Me.ViewState("_Uniqueno"), Session("COMACADEMICSLNO"), "", DrpCourse.SelectedItem.Text, DrpQualifiedUniv.SelectedItem.Text, "", "GOOD", DateConversion(TxtDateleaving.Text), DateConversion(TxtTcDate.Text), Me.ViewState("_BoardCollegeSlno"), 1, genprv, DrpCourse.SelectedItem.Value, Drpbieucs.SelectedValue, DrpIIyear.SelectedItem.Value, Session("USERSLNO"))
             End If
             'strQuery = "SELECT 2053 certificateno, '3206/2008' admno,'Narayana Junior College' colname, 'KALYAN' pupilname,'FATHERNAME OF KALYAN' parentname, 'INDIAN-TELUGU' religion,'BC-B' caste, TO_CHAR (SYSDATE, 'DD-MM-YYYY') dob, 'Intermediate 2nd Year' Pass, 'English' firtlang,'TELUGU' seclang, 'Maths-Physics-Chemistry' part3,'TELUGU-ENGLISH' mothertangue, TO_CHAR (SYSDATE, 'DD-MM-YYYY') admdt,'Inter First Year' classyear, 'Yes' point11, 'Yes' point12,'-' point13a, '-' point13b,'A MOLE ON THE LEFT ARM' mole1,'A MOLE ON THE RIGHT ARM' mole2,TO_CHAR (SYSDATE, 'DD-MM-YYYY') point15,TO_CHAR (SYSDATE, 'DD-MM-YYYY') point16, 'Good' conduct,1 documentid FROM DUAL"
             'oComm.CommandText = strQuery
@@ -166,7 +164,7 @@ Public Class BoardkarnatakReport
             If TcDum = 1 Then
                 Ds = ClsBE.P_TCgeneration_Dummy(Me.ViewState("_Uniqueno"), Session("COMACADEMICSLNO"), "", DrpCourse.SelectedItem.Text, DrpQualifiedUniv.SelectedItem.Text, "", "GOOD", DateConversion(TxtDateleaving.Text), DateConversion(TxtTcDate.Text), Me.ViewState("_BoardCollegeSlno"), 1, genprv, DrpCourse.SelectedItem.Value, Drpbieucs.SelectedValue, DrpIIyear.SelectedItem.Value, Session("USERSLNO"))
             Else
-                Ds = ClsBE.P_TCgenerationNewCBSE(Me.ViewState("_Uniqueno"), Session("COMACADEMICSLNO"), "", DrpCourse.SelectedItem.Text, DrpQualifiedUniv.SelectedItem.Text, "", "GOOD", DateConversion(TxtDateleaving.Text), DateConversion(TxtTcDate.Text), Me.ViewState("_BoardCollegeSlno"), 1, genprv, DrpCourse.SelectedItem.Value, Drpbieucs.SelectedValue, DrpIIyear.SelectedItem.Value, Session("USERSLNO"))
+                Ds = ClsBE.P_TCgenerationNew(Me.ViewState("_Uniqueno"), Session("COMACADEMICSLNO"), "", DrpCourse.SelectedItem.Text, DrpQualifiedUniv.SelectedItem.Text, "", "GOOD", DateConversion(TxtDateleaving.Text), DateConversion(TxtTcDate.Text), Me.ViewState("_BoardCollegeSlno"), 1, genprv, DrpCourse.SelectedItem.Value, Drpbieucs.SelectedValue, DrpIIyear.SelectedItem.Value, Session("USERSLNO"))
             End If
             'strQuery = "SELECT 2053 certificateno, '3206/2008' admno,'Narayana Junior College' colname, 'KALYAN' pupilname,'FATHERNAME OF KALYAN' parentname, 'INDIAN-TELUGU' religion,'BC-B' caste, TO_CHAR (SYSDATE, 'DD-MM-YYYY') dob, 'Intermediate 2nd Year' Pass, 'English' firtlang,'TELUGU' seclang, 'Maths-Physics-Chemistry' part3,'TELUGU-ENGLISH' mothertangue, TO_CHAR (SYSDATE, 'DD-MM-YYYY') admdt,'Inter First Year' classyear, 'Yes' point11, 'Yes' point12,'-' point13a, '-' point13b,'A MOLE ON THE LEFT ARM' mole1,'A MOLE ON THE RIGHT ARM' mole2,TO_CHAR (SYSDATE, 'DD-MM-YYYY') point15,TO_CHAR (SYSDATE, 'DD-MM-YYYY') point16, 'Good' conduct,1 documentid FROM DUAL"
             'oComm.CommandText = strQuery
@@ -189,9 +187,9 @@ Public Class BoardkarnatakReport
             TcDum = Session("TcDum")
             Ds = New DataSet
             If TcDum = 1 Then
-                Ds = ClsBE.P_CCgeneration_DummyCBSE(Me.ViewState("_Uniqueno"), DrpStdYear.SelectedItem.Text, Txtfrom.Text, Txtto.Text, Session("COMACADEMICSLNO"))
+                Ds = ClsBE.P_CCgeneration_Dummy(Me.ViewState("_Uniqueno"), DrpStdYear.SelectedItem.Text, Txtfrom.Text, Txtto.Text, Session("COMACADEMICSLNO"))
             Else
-                Ds = ClsBE.P_CCgenerationCBSE(Me.ViewState("_Uniqueno"), DrpStdYear.SelectedItem.Text, Txtfrom.Text, Txtto.Text, Session("COMACADEMICSLNO"))
+                Ds = ClsBE.P_CCgenerationChina(Me.ViewState("_Uniqueno"), DrpStdYear.SelectedItem.Text, Txtfrom.Text, Txtto.Text, Session("COMACADEMICSLNO"))
             End If
 
             Return Ds
@@ -211,9 +209,9 @@ Public Class BoardkarnatakReport
             TcDum = Session("TcDum")
             Ds = New DataSet
             If TcDum = 1 Then
-                Ds = ClsBE.P_CCgeneration_DummyCBSE(Me.ViewState("_Uniqueno"), DrpStdYear.SelectedItem.Text, Txtfrom.Text, Txtto.Text, Session("COMACADEMICSLNO"))
+                Ds = ClsBE.P_CCgeneration_Dummy(Me.ViewState("_Uniqueno"), DrpStdYear.SelectedItem.Text, Txtfrom.Text, Txtto.Text, Session("COMACADEMICSLNO"))
             Else
-                Ds = ClsBE.P_CCgenerationCBSE(Me.ViewState("_Uniqueno"), DrpStdYear.SelectedItem.Text, Txtfrom.Text, Txtto.Text, Session("COMACADEMICSLNO"))
+                Ds = ClsBE.P_CCgenerationChina(Me.ViewState("_Uniqueno"), DrpStdYear.SelectedItem.Text, Txtfrom.Text, Txtto.Text, Session("COMACADEMICSLNO"))
             End If
 
             Return Ds
@@ -270,7 +268,7 @@ Public Class BoardkarnatakReport
             DsPriview = TransferCertificate(1)
             Session("DsPriview") = DsPriview
 
-            Response.Redirect("BoardTCCBSEPreview.aspx")
+            Response.Redirect("BoardTCPreview.aspx")
 
         Catch oex As OracleException
             Throw (oex)
@@ -329,15 +327,12 @@ Public Class BoardkarnatakReport
 
         Dim Ds As DataSet
         ClsBE = New ClsBoardEnrollment
-        'Ds = ClsBE.Masters_Selectall(15)
-        'DrpCourse.DataSource = Ds.Tables(0)
+        Ds = ClsBE.Masters_Selectall(15)
+        DrpCourse.DataSource = Ds.Tables(0)
         DrpCourse.DataTextField = "NAME"
         DrpCourse.DataValueField = "SLNO"
         DrpCourse.DataBind()
         DrpCourse.Items.Insert(0, New ListItem("-Select-", 0))
-        DrpCourse.Items.Insert(0, New ListItem("XI", 0))
-        DrpCourse.Items.Insert(0, New ListItem("XII", 0))
-        DrpCourse.Items.Insert(0, New ListItem("XI-XII", 0))
 
 
         DrpStdYear.DataSource = Ds.Tables(0)
@@ -345,20 +340,16 @@ Public Class BoardkarnatakReport
         DrpStdYear.DataValueField = "SLNO"
         DrpStdYear.DataBind()
         DrpStdYear.Items.Insert(0, New ListItem("-Select-", 0))
-        DrpCourse.Items.Insert(0, New ListItem("-Select-", 0))
-        DrpCourse.Items.Insert(0, New ListItem("XI", 0))
-        DrpCourse.Items.Insert(0, New ListItem("XII", 0))
-        DrpCourse.Items.Insert(0, New ListItem("XI-XII", 0))
+        DrpStdYear.Items.Insert(DrpStdYear.Items.Count, New ListItem("INTERMEDIATE", DrpStdYear.Items.Count))
 
 
     End Sub
-
 
     Private Sub fillDetails(ByVal _Uniqueno As Integer)
         Try
             Dim ds As DataSet
             ClsBE = New ClsBoardEnrollment
-            ds = ClsBE.P_TCStudentDetailCBSE(_Uniqueno)
+            ds = ClsBE.P_TCStudentDetails(_Uniqueno)
 
             If Not IsDBNull(ds.Tables(0).Rows(0).Item(0)) Then
                 If ds.Tables(0).Rows(0).Item(0).ToString > 0 Then
@@ -876,7 +867,7 @@ Public Class BoardkarnatakReport
             Session("DPR") = DsCCPriview
             Dim crs As String
             If DrpStdYear.SelectedItem.Value = DrpStdYear.Items.Count Then
-                crs = DrpStdYear.SelectedItem.Text
+                crs = "INTERMEDIATE"
             Else
                 crs = DrpStdYear.SelectedItem.Text
             End If
@@ -887,7 +878,7 @@ Public Class BoardkarnatakReport
             Session("CRS") = crs
             Session("FROM") = FROM
             Session("TODATE") = TODATE
-            Response.Redirect("CCGenerateCBSE.aspx")
+            Response.Redirect("CCGenerateNew.aspx")
         Catch ex As Exception
 
         End Try

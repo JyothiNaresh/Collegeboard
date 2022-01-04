@@ -128,7 +128,7 @@ Public Class BoardKarnatakaHome
             End If
 
             objBE = New ClsBoardEnrollment
-            dsResult = objBE.P_TCSTUDENTS_SELECT(Session("COMACADEMICSLNO"), DrpExamBranch.SelectedValue, DrpBoardCollege.SelectedValue, TxtSelect.Text)
+            dsResult = objBE.P_DTCSTUDENTS_SELECTBENGALORE(Session("COMACADEMICSLNO"), DrpExamBranch.SelectedValue, DrpBoardCollege.SelectedValue, TxtSelect.Text)
             If Rbtntc.Checked = True Then
 
                 FLAG = 1
@@ -225,7 +225,7 @@ Public Class BoardKarnatakaHome
             'ElseIf Tcgen = 2 Then
             '    Response.Redirect("BoardTCReportMumbai.aspx?ADMSLNO=" & dgGrid.Items(e.Item.ItemIndex).Cells(1).Text.ToString & "&UNIQUENO=" & dgGrid.Items(e.Item.ItemIndex).Cells(0).Text.ToString & "&BOARDCOLLEGESLNO=" & dgGrid.Items(e.Item.ItemIndex).Cells(2).Text.ToString & "&FLAG=" & Session("FLAG"))
             'End If
-            Response.Redirect("BoardTCReportMumbai.aspx?ADMSLNO=" & dgGrid.Items(e.Item.ItemIndex).Cells(1).Text.ToString & "&UNIQUENO=" & dgGrid.Items(e.Item.ItemIndex).Cells(0).Text.ToString & "&BOARDCOLLEGESLNO=" & dgGrid.Items(e.Item.ItemIndex).Cells(2).Text.ToString & "&FLAG=" & Session("FLAG"))
+            Response.Redirect("BoardkarnatakReport.aspx?ADMSLNO=" & dgGrid.Items(e.Item.ItemIndex).Cells(1).Text.ToString & "&UNIQUENO=" & dgGrid.Items(e.Item.ItemIndex).Cells(0).Text.ToString & "&BOARDCOLLEGESLNO=" & dgGrid.Items(e.Item.ItemIndex).Cells(2).Text.ToString & "&FLAG=" & Session("FLAG"))
 
 
         Catch ex As Exception

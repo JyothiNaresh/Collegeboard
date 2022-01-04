@@ -107,11 +107,11 @@
 																		<ItemStyle Wrap="False" HorizontalAlign="Left"></ItemStyle>
 																		<FooterStyle Wrap="False"></FooterStyle>
 																	</asp:BoundColumn>
-                                                                    <asp:BoundColumn DataField="GRNO" HeaderText="GRNO">
+                                                                  <%--  <asp:BoundColumn DataField="GRNO" HeaderText="GRNO">
 																		<HeaderStyle Wrap="False" HorizontalAlign="Center"></HeaderStyle>
 																		<ItemStyle Wrap="False" HorizontalAlign="Left"></ItemStyle>
 																		<FooterStyle Wrap="False"></FooterStyle>
-																	</asp:BoundColumn>
+																	</asp:BoundColumn>--%>
 																	<asp:BoundColumn Visible="False" DataField="BADMNO" HeaderText="BOARD ADMNO"></asp:BoundColumn>
 																	<asp:BoundColumn DataField="STUDENTNAME" HeaderText="NAME">
 																		<ItemStyle Wrap="False"></ItemStyle>

@@ -169,20 +169,20 @@ Public Class TcGeneratekarnataka
 
             '  'lblMedium.Text = DsPriview.Tables(0).Rows(0)("MOTHERTANGUE").ToString()
             '  lblPoint17.Text = DsPriview.Tables(0).Rows(0)("TCISSUEDDATE").ToString()
-            '//  lblgameplayed.Text = DsPriview.Tables(0).Rows(0)("GAMES").ToString()
+            '  lblgameplayed.Text = DsPriview.Tables(0).Rows(0)("GAMES").ToString()
 
-            lblncc.Text = DsPriview.Tables(0).Rows(0)("NCC").ToString()
-            lblpoint13a.Text = DsPriview.Tables(0).Rows(0)("DATEOFJOIN").ToString()
+            'lblncc.Text = DsPriview.Tables(0).Rows(0)("NCC").ToString()
+            'lblpoint13a.Text = DsPriview.Tables(0).Rows(0)("DATEOFJOIN").ToString()
 
-            lblsubjectstudied.Text = DsPriview.Tables(0).Rows(0)("SUBJECTS").ToString()
-            'lblPoint14b.Text = DsPriview.Tables(0).Rows(0)("CERTIFICATENO").ToString()
+            'lblsubjectstudied.Text = DsPriview.Tables(0).Rows(0)("SUBJECTS").ToString()
+            ''lblPoint14b.Text = DsPriview.Tables(0).Rows(0)("CERTIFICATENO").ToString()
 
-            lbltotworkingdays.Text = DsPriview.Tables(0).Rows(0)("WRK_DAYS").ToString()
-            Label46.Text = DsPriview.Tables(0).Rows(0)("PRES_DAYS").ToString()
-            lblPoint16.Text = DsPriview.Tables(0).Rows(0)("DATEOFLEAVING").ToString()
-            Label55.Text = DsPriview.Tables(0).Rows(0)("TCISSUEDDATE").ToString()
-            lblPoint18.Text = DsPriview.Tables(0).Rows(0)("CONDUCT").ToString()
-            'Image1.ImageUrl = DsPriview.Tables(0).Rows(0)("LOGOPATH")
+            'lbltotworkingdays.Text = DsPriview.Tables(0).Rows(0)("WRK_DAYS").ToString()
+            'Label46.Text = DsPriview.Tables(0).Rows(0)("PRES_DAYS").ToString()
+            'lblPoint16.Text = DsPriview.Tables(0).Rows(0)("DATEOFLEAVING").ToString()
+            'Label55.Text = DsPriview.Tables(0).Rows(0)("TCISSUEDDATE").ToString()
+            'lblPoint18.Text = DsPriview.Tables(0).Rows(0)("CONDUCT").ToString()
+            ''Image1.ImageUrl = DsPriview.Tables(0).Rows(0)("LOGOPATH")
 
 
         Catch ex As Exception
