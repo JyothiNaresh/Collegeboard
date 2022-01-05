@@ -138,7 +138,7 @@
 
 																	</TD>
                                                                     <TD style="WIDTH: 127px"><asp:label id="Label30" runat="server" Width="200px" CssClass="LABLES">Gender</asp:label></TD>
-																	<TD style="WIDTH: 98px"><asp:dropdownlist id="drpgender" AutoPostBack="true" runat="server" Width="300px" CssClass="textboxASR" Height="16px">
+																	<TD style="WIDTH: 98px"><asp:dropdownlist id="drpgender" runat="server" Width="300px" CssClass="textboxASR" Height="16px">
                                                                         <asp:ListItem Selected="true" Value="0">--Select --</asp:ListItem>
                                                                         <asp:ListItem Value="1">MALE</asp:ListItem>
                                                                         <asp:ListItem  Value="2">FEMALE</asp:ListItem>
@@ -161,7 +161,7 @@
                                                                 	<TR>																	
 																	<TD style="WIDTH: 122px"><asp:label id="Label16" runat="server" Width="200px" CssClass="LABLES">Languages Studied</asp:label></TD>
 																	<TD style="WIDTH: 98px; margin-left: 40px;">
-                                                                        <asp:dropdownlist id="radlanguage" AutoPostBack="true" runat="server" Width="300px" CssClass="textboxASR" Height="16px">
+                                                                        <asp:dropdownlist id="radlanguage"  runat="server" Width="300px" CssClass="textboxASR" Height="16px">
                                                                        <asp:ListItem Selected="true" Value="0">--Select --</asp:ListItem>
                                                                              <asp:ListItem  Value="1">KARNATAKA</asp:ListItem>
                                                                         <asp:ListItem  Value="2">ENGLISH</asp:ListItem>
