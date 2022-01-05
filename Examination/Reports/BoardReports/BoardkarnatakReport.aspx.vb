@@ -166,10 +166,6 @@ Public Class BoardkarnatakReport
             Else
                 Ds = ClsBE.P_TCgenerationNew(Me.ViewState("_Uniqueno"), Session("COMACADEMICSLNO"), "", DrpCourse.SelectedItem.Text, DrpQualifiedUniv.SelectedItem.Text, "", "GOOD", DateConversion(TxtDateleaving.Text), DateConversion(TxtTcDate.Text), Me.ViewState("_BoardCollegeSlno"), 1, genprv, DrpCourse.SelectedItem.Value, Drpbieucs.SelectedValue, DrpIIyear.SelectedItem.Value, Session("USERSLNO"))
             End If
-            'strQuery = "SELECT 2053 certificateno, '3206/2008' admno,'Narayana Junior College' colname, 'KALYAN' pupilname,'FATHERNAME OF KALYAN' parentname, 'INDIAN-TELUGU' religion,'BC-B' caste, TO_CHAR (SYSDATE, 'DD-MM-YYYY') dob, 'Intermediate 2nd Year' Pass, 'English' firtlang,'TELUGU' seclang, 'Maths-Physics-Chemistry' part3,'TELUGU-ENGLISH' mothertangue, TO_CHAR (SYSDATE, 'DD-MM-YYYY') admdt,'Inter First Year' classyear, 'Yes' point11, 'Yes' point12,'-' point13a, '-' point13b,'A MOLE ON THE LEFT ARM' mole1,'A MOLE ON THE RIGHT ARM' mole2,TO_CHAR (SYSDATE, 'DD-MM-YYYY') point15,TO_CHAR (SYSDATE, 'DD-MM-YYYY') point16, 'Good' conduct,1 documentid FROM DUAL"
-            'oComm.CommandText = strQuery
-            'oAdap.SelectCommand = oComm
-            'oAdap.Fill(Ds, "TransferCertificate")
             Return Ds
         Catch oex As OracleException
             Throw (oex)
