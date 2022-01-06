@@ -100,8 +100,7 @@
 							</TR>
 						</TABLE>
 						<P align="center">
-							<TABLE id="Tablecc" style="WIDTH: 517px; HEIGHT: 149px" cellSpacing="1" cellPadding="1"
-								width="517" border="1" runat="server">
+							<TABLE id="Tablecc" style="WIDTH: 517px; HEIGHT: 149px" cellSpacing="1" cellPadding="1" visible="false" width="517" border="1" runat="server">
 								<TR>
 									<TD>
 										<P>
