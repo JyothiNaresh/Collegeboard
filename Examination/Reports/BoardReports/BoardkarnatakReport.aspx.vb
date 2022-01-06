@@ -47,7 +47,7 @@ Public Class BoardkarnatakReport
     'Protected WithEvents Label11 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label12 As System.Web.UI.WebControls.Label
     'Protected WithEvents Table1 As System.Web.UI.HtmlControls.HtmlTable
-    'Protected WithEvents Tablecc As System.Web.UI.HtmlControls.HtmlTable
+    ' Protected WithEvents Tablecc As System.Web.UI.HtmlControls.HtmlTable
     'Protected WithEvents d As System.Web.UI.WebControls.DropDownList
     'Protected WithEvents BtnCc As System.Web.UI.WebControls.Button
     'Protected WithEvents btnCCGenerate As System.Web.UI.WebControls.Button

@@ -11,13 +11,15 @@
 		<meta name="vs_defaultClientScript" content="JavaScript">
 		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
 	    <style type="text/css">
-            .auto-style1 {
-                height: 29px;
-            }
-            .auto-style2 {
-                width: 106px;
-            }
             .lables {}
+            .auto-style3 {
+                height: 17px;
+                width: 253px;
+            }
+            .auto-style4 {
+                height: 17px;
+                width: 318px;
+            }
         </style>
 	</HEAD>
 	<body onload="pageset();" MS_POSITIONING="GridLayout">
@@ -136,8 +138,8 @@
                                     <table style="width: 328%">
                                         <tr>
                                             <TD style="WIDTH: 67px; HEIGHT: 25px" class="lables" height="25" align="center"><asp:label id="Label15" runat="server" Height="20px" Width="140%" Font-Bold="True" Font-Names="Calibri"
-										CssClass="lables" Font-Size="Smaller">1</asp:label></TD>
-								<TD style="WIDTH: 321px; HEIGHT: 17px" class="lables" height="17" align="left" >
+										CssClass="lables" Font-Size="Smaller">2</asp:label></TD>
+								<TD class="auto-style3" height="17" align="right" >
 									
                                      <asp:label id="Label16" runat="server" Font-Names="Calibri" Font-Size="Smaller">Admission No </asp:label>
 
@@ -145,8 +147,8 @@
 								<TD style="WIDTH: 14px; HEIGHT: 25px" class="lables" height="25" align="center"><STRONG>:</STRONG></TD>
 								<TD style="HEIGHT: 17px" class="lables" height="17" align="left"><asp:label id="Label17" runat="server" Font-Names="Calibri" Font-Size="Smaller">Label</asp:label></TD>
                                              <TD style="WIDTH: 67px; HEIGHT: 25px" class="lables" height="25" align="center"><asp:label id="Label18" runat="server" Height="20px" Width="100%" Font-Bold="True" Font-Names="Calibri"
-										CssClass="lables" Font-Size="Smaller">1</asp:label></TD>
-								<TD style="WIDTH: 321px; HEIGHT: 17px" class="lables" height="17" align="left" >
+										CssClass="lables" Font-Size="Smaller">2b</asp:label></TD>
+								<TD style="HEIGHT: 25px" class="lables" height="25" align="left" >
 									
                                      <asp:label id="Label19" runat="server" Font-Names="Calibri" Font-Size="Smaller">Student/SAT No </asp:label>
 

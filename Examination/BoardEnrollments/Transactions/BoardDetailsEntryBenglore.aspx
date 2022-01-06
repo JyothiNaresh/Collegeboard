@@ -180,6 +180,7 @@
                                                                         <asp:ListItem Value="2" >HINDI</asp:ListItem>
                                                                             <asp:ListItem Value="3" >SANSKRIT</asp:ListItem>
                                                                             <asp:ListItem Value="4" >FRENCH</asp:ListItem>
+                                                                            <asp:ListItem Value="6" >FRENCH</asp:ListItem>
                                                                              <asp:ListItem Value="5" >OTHER</asp:ListItem>
 																	                        </asp:dropdownlist>																	</TD>
 																	</TD>
