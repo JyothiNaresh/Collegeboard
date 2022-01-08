@@ -164,7 +164,7 @@ Public Class BoardkarnatakReport
             If TcDum = 1 Then
                 Ds = ClsBE.P_TCgeneration_Dummy(Me.ViewState("_Uniqueno"), Session("COMACADEMICSLNO"), "", DrpCourse.SelectedItem.Text, DrpQualifiedUniv.SelectedItem.Text, "", "GOOD", DateConversion(TxtDateleaving.Text), DateConversion(TxtTcDate.Text), Me.ViewState("_BoardCollegeSlno"), 1, genprv, DrpCourse.SelectedItem.Value, Drpbieucs.SelectedValue, DrpIIyear.SelectedItem.Value, Session("USERSLNO"))
             Else
-                Ds = ClsBE.P_TCgenerationNew(Me.ViewState("_Uniqueno"), Session("COMACADEMICSLNO"), "", DrpCourse.SelectedItem.Text, DrpQualifiedUniv.SelectedItem.Text, "", "GOOD", DateConversion(TxtDateleaving.Text), DateConversion(TxtTcDate.Text), Me.ViewState("_BoardCollegeSlno"), 1, genprv, DrpCourse.SelectedItem.Value, Drpbieucs.SelectedValue, DrpIIyear.SelectedItem.Value, Session("USERSLNO"))
+                Ds = ClsBE.P_TCgenerationNewBengalore(Me.ViewState("_Uniqueno"), Session("COMACADEMICSLNO"), "", DrpCourse.SelectedItem.Text, DrpQualifiedUniv.SelectedItem.Text, "", "GOOD", DateConversion(TxtDateleaving.Text), DateConversion(TxtTcDate.Text), Me.ViewState("_BoardCollegeSlno"), 1, genprv, DrpCourse.SelectedItem.Value, Drpbieucs.SelectedValue, DrpIIyear.SelectedItem.Value, Session("USERSLNO"))
             End If
             Return Ds
         Catch oex As OracleException
