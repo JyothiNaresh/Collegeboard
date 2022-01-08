@@ -23,6 +23,24 @@ Partial Public Class TcGeneratekarnataka
     Protected WithEvents Form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Label3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Label2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Label35 control.
     '''</summary>
     '''<remarks>
@@ -104,13 +122,13 @@ Partial Public Class TcGeneratekarnataka
     Protected WithEvents Label11 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Label12 control.
+    '''lblcollgename control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label12 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblcollgename As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Label15 control.
@@ -158,13 +176,13 @@ Partial Public Class TcGeneratekarnataka
     Protected WithEvents Label19 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Label20 control.
+    '''lblsatno control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label20 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblsatno As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Label47 control.
@@ -192,6 +210,51 @@ Partial Public Class TcGeneratekarnataka
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblStuName As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Label23 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label23 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Label25 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label25 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Label26 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label26 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Label34 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label34 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Label36 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Label36 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Label48 control.
@@ -300,15 +363,6 @@ Partial Public Class TcGeneratekarnataka
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblCaste As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label9 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label9 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Label52 control.
@@ -471,222 +525,6 @@ Partial Public Class TcGeneratekarnataka
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblPoint16 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label56 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label56 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label59 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label59 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label60 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label60 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label53 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label53 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label54 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label54 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label55 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label55 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label4 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label43 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label43 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label44 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label44 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label46 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label46 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label30 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label30 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label38 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label38 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lbltotworkingdays control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbltotworkingdays As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label31 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label31 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label32 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label32 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lbldues control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lbldues As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label28 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label28 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label29 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label29 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lblncc control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblncc As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label66 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label66 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Label85 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Label85 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lblPoint17 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblPoint17 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Label67 control.

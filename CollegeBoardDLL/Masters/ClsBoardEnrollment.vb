@@ -5300,45 +5300,131 @@ Public Class ClsBoardEnrollment
     End Function
 
 
-    'Public Function GetDataForStudent_Benglore(ByVal PADMSNO As Integer, ByVal PBRANCHSLNO As Integer, ByVal PCOMACADEMICSLNO As Integer) As DataSet
-    '    Try
-    '        ObjConn = New Connection
-    '        oCommand = New OracleCommand
-    '        oAdapter = New OracleDataAdapter
-    '        ds = New DataSet
+    Public Function P_TCgenerationNewBengalore(ByVal pUniqueno As Integer, ByVal pComacademicslno As Integer, ByVal pscholarship As String, ByVal pqualify_iiyear As String, ByVal pqualify_univercity As String, ByVal pconcession As String, ByVal pconduct As String, ByVal pdateofleaving As DateTime, ByVal ptcdate As DateTime, ByVal pboardcollegeslno As Integer, ByVal Pagreeslno As Integer, ByVal tctype As Integer, ByVal ReadingWhenLeavingSlno As Integer, ByVal Bieucs As Integer, ByVal Tcpoint11 As Integer, ByVal iUSERSLNO As Integer) As Data.DataSet
+        Try
 
-    '        oConn = ObjConn.GetConnection()
-    '        oCommand.CommandText = "P_BOARDSTUDENT_BANGLORE"
-    '        oCommand.Connection = oConn
-    '        oCommand.CommandType = CommandType.StoredProcedure
+            ObjConn = New Connection
+            oConn = ObjConn.GetConnection()
 
-    '        oParameter = oCommand.Parameters.Add("iADMSNO", OracleType.Number)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = PADMSNO
+            iCommand = New OracleClient.OracleCommand
+            oCommand = New OracleClient.OracleCommand
 
-    '        oParameter = oCommand.Parameters.Add("iEBSLNO", OracleType.Number)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = PBRANCHSLNO
+            oParameter = New OracleClient.OracleParameter
+            oAdapter = New OracleClient.OracleDataAdapter
+            ds = New Data.DataSet
 
-    '        oParameter = oCommand.Parameters.Add("iCACYNO", OracleType.Number)
-    '        oParameter.Direction = ParameterDirection.Input
-    '        oParameter.Value = PCOMACADEMICSLNO
+            oCommand.CommandText = "GENERATETC_NEWBANGLORE"
+            oCommand.Connection = oConn
+            oCommand.CommandType = CommandType.StoredProcedure
 
-    '        oParameter = oCommand.Parameters.Add("DATACUR", OracleType.Cursor)
-    '        oParameter.Direction = ParameterDirection.Output
-    '        oAdapter.SelectCommand = oCommand
+            iCommand.CommandText = "EXAM_TCISSUED_INSERT"
+            iCommand.Connection = oConn
+            iCommand.CommandType = CommandType.StoredProcedure
 
-    '        oAdapter.Fill(ds)
+            oParameter = iCommand.Parameters.Add("IUNIQUENO", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pUniqueno
 
-    '        Return ds
+            oParameter = iCommand.Parameters.Add("ICOMACADEMICSLNO", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pComacademicslno
 
-    '    Catch oex As OracleException
-    '        Throw oex
-    '    Catch ex As Exception
-    '        Throw ex
-    '    Finally
-    '        ObjConn.Free()
-    '    End Try
+            oParameter = iCommand.Parameters.Add("IUSERSLNO", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = iUSERSLNO
 
-    'End Function
+            oParameter = iCommand.Parameters.Add("ITCTYPE", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = tctype
+
+            'ADD IN PARAMETER NAME
+            oParameter = oCommand.Parameters.Add("iuniqueno", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pUniqueno
+
+            oParameter = oCommand.Parameters.Add("icomacademicslno", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pComacademicslno
+
+
+            oParameter = oCommand.Parameters.Add("ischolarship", OracleType.VarChar, 200)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pscholarship
+
+
+            oParameter = oCommand.Parameters.Add("iqualify_iiyear", OracleType.VarChar, 200)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pqualify_iiyear
+
+
+            oParameter = oCommand.Parameters.Add("iqualify_univercity", OracleType.VarChar, 200)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pqualify_univercity
+
+
+            oParameter = oCommand.Parameters.Add("iconcession", OracleType.VarChar, 200)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pconcession
+
+
+            oParameter = oCommand.Parameters.Add("iconduct", OracleType.VarChar, 200)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pconduct
+
+
+            oParameter = oCommand.Parameters.Add("idateofleaving", OracleType.DateTime)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pdateofleaving
+
+            oParameter = oCommand.Parameters.Add("ITCDATE", OracleType.DateTime)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = ptcdate
+
+            oParameter = oCommand.Parameters.Add("iboardcollegeslno", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = pboardcollegeslno
+
+            oParameter = oCommand.Parameters.Add("iagreeslno", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Pagreeslno
+
+            oParameter = oCommand.Parameters.Add("itctype", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = tctype
+
+            oParameter = oCommand.Parameters.Add("IREADINGWHENLEAVING", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = ReadingWhenLeavingSlno
+
+            oParameter = oCommand.Parameters.Add("IBIEUCS", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Bieucs
+
+            oParameter = oCommand.Parameters.Add("IPOINT11", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = Tcpoint11
+
+            oParameter = oCommand.Parameters.Add("IUSERSLNO", OracleType.Number)
+            oParameter.Direction = ParameterDirection.Input
+            oParameter.Value = iUSERSLNO
+
+            'iagreeslno iRemarks
+            'ADD IN PARAMETER NAME IUSERID
+            oParameter = oCommand.Parameters.Add("DATACUR", OracleType.Cursor)
+            oParameter.Direction = ParameterDirection.Output
+
+            oAdapter.SelectCommand = oCommand
+            oAdapter.Fill(ds, "TransferCertificate")
+
+            iCommand.ExecuteNonQuery()
+
+        Catch oex As OracleException
+            Throw oex
+        Catch ex As Exception
+            Throw ex
+        Finally
+            If Not ObjConn Is Nothing Then ObjConn.Free()
+        End Try
+        Return ds
+    End Function
 End Class
