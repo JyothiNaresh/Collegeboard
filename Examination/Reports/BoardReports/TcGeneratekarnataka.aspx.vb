@@ -11,7 +11,7 @@ Public Class TcGeneratekarnataka
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
 
     End Sub
-    'Protected WithEvents lblClgNameCode As System.Web.UI.WebControls.Label
+    Protected WithEvents lblgender As System.Web.UI.WebControls.Label
     'Protected WithEvents lblClgAddress1 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblClgAddress2 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label47 As System.eb.UI.WebControls.Label
@@ -34,7 +34,7 @@ Public Class TcGeneratekarnataka
     'Protected WithEvents Label11 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblCaste As System.Web.UI.WebControls.Label
     'Protected WithEvents Label52 As System.Web.UI.WebControls.Label
-    'Protected WithEvents Label12 As System.Web.UI.WebControls.Label
+    Protected WithEvents Label16 As System.Web.UI.WebControls.Label
     'Protected WithEvents lblDob As System.Web.UI.WebControls.Label
     'Protected WithEvents lblDobwords As System.Web.UI.WebControls.Label
     'Protected WithEvents Label53 As System.Web.UI.WebControls.Label
@@ -74,7 +74,7 @@ Public Class TcGeneratekarnataka
     'Protected WithEvents Label24 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label23 As System.Web.UI.WebControls.Label
     'Protected WithEvents Label19 As System.Web.UI.WebControls.Label
-    'Protected WithEvents lblPoint15a As System.Web.UI.WebControls.Label
+    Protected WithEvents lblPromotion As System.Web.UI.WebControls.Label
 
     'Protected WithEvents lblPoint15b As System.Web.UI.WebControls.Label
     'Protected WithEvents Label65 As System.Web.UI.WebControls.Label
@@ -142,45 +142,85 @@ Public Class TcGeneratekarnataka
             'ElseIf DsPriview.Tables(0).Rows(0)("DOCUMENTID") > 2 Then
             '    lblDocumentId.Text = "TRIPLICATE"
             'End If
-
+            Dim FIRSTLANGA As String
+            Dim SECONDLANG As String
             lblcollgename.Text = DsPriview.Tables(0).Rows(0)("COLNAME").ToString
 
             lblTcno.Text = DsPriview.Tables(0).Rows(0)("CERTIFICATENO").ToString
-            'lblRcno.Text = DsPriview.Tables(0).Rows(0)("RCNO").ToString
-            LblAdmno.Text = DsPriview.Tables(0).Rows(0)("ADMNO").ToString
+            If (DsPriview.Tables(0).Rows(0)("GENDER").ToString = "1") Then
+                lblgender.Text = "MALE"
+            Else
+                lblgender.Text = "FEMALE"
+            End If
 
+
+            LblAdmno.Text = DsPriview.Tables(0).Rows(0)("ADMNO").ToString
+            lblsatno.Text = DsPriview.Tables(0).Rows(0)("BRSTUSATNUM").ToString
             'lblClgNameCode.Text = DsPriview.Tables(0).Rows(0)("COLNAME").ToString
             ' LblColAddr.Text = DsPriview.Tables(0).Rows(0)("TCADDR1").ToString + "" + DsPriview.Tables(0).Rows(0)("TCADDR2").ToString
-            ' lblClgAddress2.Text = DsPriview.Tables(0).Rows(0)("TCADDR2").ToString
+            If (DsPriview.Tables(0).Rows(0)("SCHEDULE_CASTE").ToString = "1") Then
+                lblSchedule.Text = "YES"
+            Else
+                lblSchedule.Text = "NO"
+            End If
+
 
             lblStuName.Text = DsPriview.Tables(0).Rows(0)("PUPILNAME").ToString
             lblStuFname.Text = DsPriview.Tables(0).Rows(0)("PARENTNAME").ToString
             lblStuMname.Text = DsPriview.Tables(0).Rows(0)("MOTHERNAME").ToString
 
-            lblNationality.Text = DsPriview.Tables(0).Rows(0)("NATIONALITY").ToString
-            lblCaste.Text = DsPriview.Tables(0).Rows(0)("CASTE").ToString
+            Label36.Text = DsPriview.Tables(0).Rows(0)("NATIONALITY").ToString
+            If Not DsPriview.Tables(0).Rows(0)("CASTE").ToString = Nothing Then
+                lblCaste.Text = DsPriview.Tables(0).Rows(0)("CASTE").ToString
+            End If
+            'lblCaste.Text = DsPriview.Tables(0).Rows(0)("CASTE").ToString
             lblDob.Text = DsPriview.Tables(0).Rows(0)("DOB").ToString
             lblDobwords.Text = DsPriview.Tables(0).Rows(0)("DOBWORDS").ToString
+            lblPromotion.Text = "YES"
+            If DsPriview.Tables(0).Rows(0)("LAST_STUDIED").ToString = 1 Then
+                lbltimeofleaving.Text = "FIRST PUC"
+            Else
+                lbltimeofleaving.Text = "SECOND PUC"
+            End If
 
-            'lblPoint8a.Text = DsPriview.Tables(0).Rows(0)("PASS").ToString
-            'lblPoint8b.Text = DsPriview.Tables(0).Rows(0)("FIRTLANG").ToString
-            'lblPoint8c.Text = DsPriview.Tables(0).Rows(0)("SECLANG").ToString
+            If DsPriview.Tables(0).Rows(0)("LANGUAGESECOND").ToString = 1 Then
+                SECONDLANG = "ENGLISH"
+            ElseIf DsPriview.Tables(0).Rows(0)("LANGUAGESECOND").ToString = 2 Then
+                SECONDLANG = "HINDI"
+            ElseIf DsPriview.Tables(0).Rows(0)("LANGUAGESECOND").ToString = 3 Then
+                SECONDLANG = "SANSKRIT"
+            ElseIf DsPriview.Tables(0).Rows(0)("LANGUAGESECOND").ToString = 4 Then
+                SECONDLANG = "FRENCH"
+            ElseIf DsPriview.Tables(0).Rows(0)("LANGUAGESECOND").ToString = 6 Then
+                SECONDLANG = "KANADA"
+            Else
+                SECONDLANG = DsPriview.Tables(0).Rows(0)("OTHER").ToString
+            End If
+
+            Label37.Text = SECONDLANG
+
             'lblPoint8d.Text = DsPriview.Tables(0).Rows(0)("PART3").ToString()
 
             'lblMedium.Text = DsPriview.Tables(0).Rows(0)("MOTHERTANGUE").ToString()
-            ' lblPoint17.Text = DsPriview.Tables(0).Rows(0)("TCISSUEDDATE").ToString()
-            'lblgameplayed.Text = DsPriview.Tables(0).Rows(0)("GAMES").ToString()
-
-            'lblncc.Text = DsPriview.Tables(0).Rows(0)("NCC").ToString()
+            Label31.Text = DsPriview.Tables(0).Rows(0)("CONCESSION").ToString()
+            Label26.Text = DsPriview.Tables(0).Rows(0)("SUBCASTE").ToString()
+            Label29.Text = DsPriview.Tables(0).Rows(0)("TOT_WORKDAYS").ToString()
+            Label16.Text = DsPriview.Tables(0).Rows(0)("WORK_DAYSPRE").ToString()
             lblpoint13a.Text = DsPriview.Tables(0).Rows(0)("DATEOFJOIN").ToString()
 
-            lblsubjectstudied.Text = DsPriview.Tables(0).Rows(0)("SUBJECTS").ToString()
+            If DsPriview.Tables(0).Rows(0)("FIRSTLANG").ToString() = 1 Then
+                FIRSTLANGA = "KARNATAKA"
+            Else
+                FIRSTLANGA = "ENGLISH"
+            End If
+
+            lblsubjectstudied.Text = DsPriview.Tables(0).Rows(0)("SUBJECTS").ToString() + "," + FIRSTLANGA
             'lblPoint14b.Text = DsPriview.Tables(0).Rows(0)("CERTIFICATENO").ToString()
 
             'lbltotworkingdays.Text = DsPriview.Tables(0).Rows(0)("WRK_DAYS").ToString()
             'Label46.Text = DsPriview.Tables(0).Rows(0)("PRES_DAYS").ToString()
             lblPoint16.Text = DsPriview.Tables(0).Rows(0)("DATEOFLEAVING").ToString()
-            ' Label55.Text = DsPriview.Tables(0).Rows(0)("TCISSUEDDATE").ToString()
+            Label5.Text = DsPriview.Tables(0).Rows(0)("LASTATTEND").ToString()
             lblPoint18.Text = DsPriview.Tables(0).Rows(0)("CONDUCT").ToString()
             'Image1.ImageUrl = DsPriview.Tables(0).Rows(0)("LOGOPATH")
 

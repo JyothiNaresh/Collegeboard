@@ -264,7 +264,7 @@ Public Class BoardkarnatakReport
             DsPriview = TransferCertificate(1)
             Session("DsPriview") = DsPriview
 
-            Response.Redirect("BoardTCPreview.aspx")
+            Response.Redirect("BoardTCPreviewKarnataka.aspx")
 
         Catch oex As OracleException
             Throw (oex)
