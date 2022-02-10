@@ -10,15 +10,9 @@ Public Class ReportConnection
         Try
             Dim conStr As String
             Con = New OracleConnection
-            'conStr = ConfigurationSettings.AppSettings("ReportConnectionString")
-            '' THIS FOR lOCAL DEVELOPMENT
-            'conStr = "Data Source=ORCL_DEV;User ID=COLLEGENEW;PASSWORD=LOCAL; Max Pool Size=500;"
+           
+            conStr = "Data Source=ORCL_DEV;User ID=COLLEGENEW;PASSWORD=LOCAL; Max Pool Size=500;"
 
-
-            '' THIS FOR prod DEVELOPMENT
-            'conStr = "Data Source=ORCL;User ID=COLLEGENEW;PASSWORD=NESINDIA; Max Pool Size=500;"
-
-            conStr = "Data Source=ORCL;User ID=SCHOOLENEW;PASSWORD=NESINDIA;  Max Pool Size=500;"
             Con.ConnectionString = conStr
             Con.Open()
 
